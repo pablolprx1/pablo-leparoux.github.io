@@ -13,17 +13,59 @@ const Veille = () => (
         (Remplace ce texte par ta propre démarche de veille : sources, blogs, newsletters, technos surveillées…)
       </span>
     </div>
-    {/* Exemples sujets de veille */}
+    {/* Pyton Django */}
     <div className="grid gap-6 w-full max-w-2xl">
       <div className="bg-white/80 dark:bg-black/60 glass-morphism p-6 rounded-xl shadow hover-scale transition">
-        <p className="font-semibold mb-1">Veille sur les frameworks JavaScript</p>
-        <ul className="list-disc pl-6 text-base">
-          <li>React, Vue, Svelte – évolution et communauté</li>
-          <li>Nouveautés ES2024</li>
-          <li>Blogs : Smashing Magazine, Grafikart, Mozilla Dev</li>
+        <p className="font-semibold mb-1">Veille sur le framework Python Django</p>
+          <ul className="list-disc pl-6 text-base">
+            <li>
+              <a 
+                href="https://www.djangoproject.com/start/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-blue-500 hover:underline"
+              >
+                Réalisation du tutoriel sur le site officiel
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://www.youtube.com/watch?v=LxEFgfPdhDg&list=PLEn9o0UAh_cCszR1kXFAe-4lxkJjCnAiH" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-blue-500 hover:underline"
+              >
+                Formation via des vidéos YouTube
+              </a>
+            </li>
         </ul>
       </div>
-      {/* Ajoute ici d'autres cartouches de veille */}
+      {/* WinDev + WLangage */}
+      <div className="bg-white/80 dark:bg-black/60 glass-morphism p-6 rounded-xl shadow hover-scale transition">
+        <p className="font-semibold mb-1">Veille sur le WLangage de la suite PCSOFT</p>
+        <ul className="list-disc pl-6 text-base">
+        <li>
+              <a 
+                href="https://doc.pcsoft.fr/fr-FR/?1410087510&verdisp=290" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-blue-500 hover:underline"
+              >
+                Réalisation du tutoriel WEBDEV sur le site officiel
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://pcsoft.fr/annonce2025/index.html" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-blue-500 hover:underline"
+              >
+                WINDEV TECH TOUR 2025
+              </a>
+            </li>
+        </ul>
+      </div>
     </div>
   </section>
 );

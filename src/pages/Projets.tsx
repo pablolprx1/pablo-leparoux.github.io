@@ -3,7 +3,7 @@ import { FolderArchive } from "lucide-react";
 
 const projects = [
   {
-    title: "Gestionnaire de tâches",
+    title: "Gestionnaire de projets",
     description: "Application web pour organiser, suivre et partager des tâches en équipe.",
     img: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&q=80",
   },
@@ -13,8 +13,8 @@ const projects = [
     img: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&q=80",
   },
   {
-    title: "API météo",
-    description: "Service REST pour récupérer la météo en temps réel, réalisé en Node.js.",
+    title: "API REST Cabinet infirmier",
+    description: "Service REST pour la base de données d'un cabinet infirmier.",
     img: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=500&q=80",
   },
 ];

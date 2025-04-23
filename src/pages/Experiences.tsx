@@ -14,18 +14,26 @@ const Experiences = () => (
         (Remplace ce texte par tes vraies missions, entreprises, stacks techniques, résultats, etc.)
       </span>
     </div>
-    {/* Exemples d'expériences */}
+    {/* Alternance FOBware SI */}
     <div className="grid gap-6 w-full max-w-2xl">
       <div className="bg-white/80 dark:bg-black/60 glass-morphism p-6 rounded-xl shadow hover-scale transition">
-        <p className="font-semibold">Développeur stagiaire — Société XYZ</p>
-        <p className="text-gray-500 dark:text-gray-300 text-sm mb-1">Mars 2024 - Juin 2024</p>
+        <p className="font-semibold">Alternance Développeur FullStack - FOBware SI</p>
+        <p className="text-gray-500 dark:text-gray-300 text-sm mb-1">Septembre 2024 - Septembre 2025</p>
         <ul className="list-disc pl-6 text-base">
-          <li>Développement d'une application web en React et Node.js</li>
-          <li>Mise en place d'une base de données PostgreSQL</li>
-          <li>Gestion de la documentation et support utilisateurs</li>
+          <li>Passage en API d’une application interne de gestion de tâches</li>
+          <li>Ticketting</li>
+          <li>Réalisation de pages sur le site interne de gestion d’entreprise (WEBDEV)</li>
         </ul>
       </div>
-      {/* Ajoute d'autres encarts similaires */}
+      {/* Stage FOBware SI */}
+      <div className="bg-white/80 dark:bg-black/60 glass-morphism p-6 rounded-xl shadow hover-scale transition">
+        <p className="font-semibold">Stage Développeur Web - FOBware SI</p>
+        <p className="text-gray-500 dark:text-gray-300 text-sm mb-1">Mai 2024 - Juin 2024</p>
+        <ul className="list-disc pl-6 text-base">
+          <li>Apprentissage de langages/frameworks (Python Django/JSS)</li>
+          <li>Développement d’un site de gestion de charge/capacité</li>
+        </ul>
+      </div>
     </div>
   </section>
 );
