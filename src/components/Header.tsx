@@ -1,6 +1,7 @@
 
 import { Link, useLocation } from "react-router-dom";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Copy } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
 
 const menuLinks = [
   { label: "Accueil", to: "/" },
@@ -10,8 +11,19 @@ const menuLinks = [
   { label: "Veille technologique", to: "/veille" },
 ];
 
+const email = "leparouxpablo@gmail.com";
+
 const Header = () => {
   const location = useLocation();
+  
+  const handleCopyMail = async () => {
+    await navigator.clipboard.writeText(email);
+    toast({
+      title: "Adresse copiée !",
+      description: "L'adresse e-mail a été copiée dans le presse-papier.",
+      duration: 3000,
+    });
+  };
 
   return (
     <header className="w-full glass-morphism px-4 py-3 flex items-center justify-between shadow-xl z-20 mb-4 border border-white/25 backdrop-blur-xl sticky top-0">
@@ -64,13 +76,14 @@ const Header = () => {
         >
           <Linkedin size={20} strokeWidth={2.2} className="text-[#0e76a8]" />
         </a>
-        <a
-          href="mailto:leparouxpablo@gmail"
-          className="p-2 rounded-full hover:scale-110 hover:bg-purple-100 dark:hover:bg-purple-900 transition"
-          aria-label="Mail"
+        <button
+          onClick={handleCopyMail}
+          className="p-2 rounded-full hover:scale-110 hover:bg-purple-100 dark:hover:bg-purple-900 transition group"
+          aria-label="Copier l'adresse e-mail"
         >
-          <Mail size={20} strokeWidth={2.2} className="text-violet-400" />
-        </a>
+          <Mail size={20} strokeWidth={2.2} className="text-violet-400 inline" />
+          <Copy size={12} strokeWidth={2.2} className="inline ml-1 text-gray-400 opacity-60 group-hover:opacity-100 transition-opacity" />
+        </button>
       </div>
     </header>
   );

@@ -1,6 +1,6 @@
 
 import useEmblaCarousel from "embla-carousel-react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
 
 // Pour chaque compétence et logiciel, associer une image libre (url externes SVG/png ou images dans /public)
 const skills = [
@@ -27,23 +27,33 @@ const tools = [
  * Carrousel compétences/logiciels avec défilement centré automatique.
  */
 export function SkillCarousel({ items }: { items: { name: string; img: string }[] }) {
-  // Embla – centrer l’élément actif
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "center", skipSnaps: false });
+  // Embla – configuration avec alignement centré et animation fluide
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true, 
+    align: "center", 
+    skipSnaps: false,
+    dragFree: true
+  });
+  
   const autoplayInterval = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext({ immediate: false });
+  }, [emblaApi]);
 
   useEffect(() => {
     if (!emblaApi) return;
-
-    autoplayInterval.current = setInterval(() => {
-      if (emblaApi) {
-        emblaApi.scrollNext();
-      }
-    }, 2000);
+    
+    // Initialisation du carrousel
+    emblaApi.reInit();
+    
+    // Démarre le défilement automatique
+    autoplayInterval.current = setInterval(scrollNext, 2000);
 
     return () => {
       if (autoplayInterval.current) clearInterval(autoplayInterval.current);
     };
-  }, [emblaApi]);
+  }, [emblaApi, scrollNext]);
 
   return (
     <div ref={emblaRef} className="overflow-hidden">
