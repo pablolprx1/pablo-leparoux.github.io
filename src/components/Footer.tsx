@@ -3,43 +3,41 @@ import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="w-full py-7 px-2 mt-12 bg-gradient-to-tr from-violet-100/40 via-white/60 to-purple-100/50 dark:from-slate-900 dark:via-black/70 dark:to-indigo-900 glass-morphism border-t border-white/20">
-      <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-3 mb-4 md:mb-0">
+    <footer className="w-full border-t border-white/20 bg-white/80 dark:bg-black/70 backdrop-blur px-2 py-3">
+      <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+        <div className="flex items-center gap-2">
           <a
             href="https://github.com/votrerepo"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-full hover:bg-black/10 dark:hover:bg-white/5 transition"
+            className="p-2 rounded-full hover:bg-gray-200/70 dark:hover:bg-gray-800/60 transition"
             aria-label="GitHub"
           >
-            <Github size={22} />
+            <Github size={20} className="text-gray-700 dark:text-gray-200" />
           </a>
           <a
             href="https://linkedin.com/in/votreprofil"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-full hover:bg-[#0e76a810] dark:hover:bg-[#0e76a81d] transition"
+            className="p-2 rounded-full hover:bg-[#E8F4FD]/70 dark:hover:bg-[#233D4D]/40 transition"
             aria-label="LinkedIn"
           >
-            <Linkedin size={22} />
+            <Linkedin size={20} className="text-[#0e76a8]" />
           </a>
           <a
             href="mailto:votre.mail@pro.fr"
-            className="p-3 rounded-full hover:bg-purple-100 dark:hover:bg-purple-800 transition"
+            className="p-2 rounded-full hover:bg-purple-100 dark:hover:bg-purple-900 transition"
             aria-label="Email"
           >
-            <Mail size={22} />
+            <Mail size={20} className="text-violet-500 dark:text-violet-300" />
           </a>
         </div>
-        <div className="flex flex-col items-center text-sm text-gray-900 dark:text-gray-200 gap-1">
-          <span>
-            <strong>Votre Nom Prénom</strong>
-          </span>
-          <span className="flex items-center gap-1">
-            <MapPin size={14} className="opacity-80 mr-1" />
-            Nantes, France
-          </span>
+        <div className="flex items-center text-xs text-gray-800 dark:text-gray-300 gap-1 font-medium">
+          <span className="hidden md:inline">©</span>
+          <span className="font-bold">Votre Nom Prénom</span>
+          <span className="mx-1 opacity-60">|</span>
+          <MapPin size={13} className="opacity-70 mr-1" />
+          <span>Nantes, France</span>
         </div>
       </div>
     </footer>
