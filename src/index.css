@@ -3,19 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Mode clair/foncé : seul le fond change */
-body.light-bg {
-  background: #f4f4f4;
-}
-
-body.dark-bg {
-  background: #222;
-}
-
 /* Glassmorphism, transitions et fade-in/out */
 @layer base {
   .glass-morphism {
-    @apply backdrop-blur-lg bg-white/70 dark:bg-black/50 border border-border/40 rounded-2xl shadow-lg;
+    @apply backdrop-blur-lg bg-white/70 border border-border/40 rounded-2xl shadow-lg;
   }
   .hover-scale {
     @apply transition-transform duration-150 hover:scale-105;
@@ -24,6 +15,7 @@ body.dark-bg {
     animation: fade-in 0.5s cubic-bezier(.4,0,.2,1) both;
   }
 }
+
 @keyframes fade-in {
   from { opacity: 0; transform: translateY(16px);}
   to { opacity: 1; transform: translateY(0);}
