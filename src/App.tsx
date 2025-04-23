@@ -12,15 +12,19 @@ import Experiences from "./pages/Experiences";
 import Parcours from "./pages/Parcours";
 import Veille from "./pages/Veille";
 import Projets from "./pages/Projets";
+import Footer from "@/components/Footer";
 
-// Layout qui inclut la sidebar pour toutes les pages
+// Layout qui inclut la sidebar et le footer pour toutes les pages
 function MainLayout() {
   return (
-    <div className="min-h-screen flex w-full">
-      <AppSidebar />
-      <main className="flex-1 min-h-screen flex flex-col">
-        <Outlet />
-      </main>
+    <div className="min-h-screen flex flex-col w-full">
+      <div className="flex flex-1">
+        <AppSidebar />
+        <main className="flex-1 min-h-screen flex flex-col">
+          <Outlet />
+        </main>
+      </div>
+      <Footer />
     </div>
   );
 }
