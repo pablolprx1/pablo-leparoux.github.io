@@ -47,7 +47,7 @@ const Header = () => {
       {/* Liens sociaux mini pour l'entête */}
       <div className="hidden md:flex gap-3 items-center">
         <a
-          href="https://github.com/votrerepo"
+          href="https://github.com/pablolprx1/"
           target="_blank"
           rel="noopener noreferrer"
           className="p-2 rounded-full hover:scale-110 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
@@ -56,7 +56,7 @@ const Header = () => {
           <Github size={20} strokeWidth={2.2} className="text-gray-700 dark:text-gray-200" />
         </a>
         <a
-          href="https://linkedin.com/in/votreprofil"
+          href="https://www.linkedin.com/in/pablo-leparoux-2866a7296/"
           target="_blank"
           rel="noopener noreferrer"
           className="p-2 rounded-full hover:scale-110 hover:bg-blue-100 dark:hover:bg-blue-900 transition"
@@ -65,7 +65,7 @@ const Header = () => {
           <Linkedin size={20} strokeWidth={2.2} className="text-[#0e76a8]" />
         </a>
         <a
-          href="mailto:votre.mail@pro.fr"
+          href="mailto:leparouxpablo@gmail"
           className="p-2 rounded-full hover:scale-110 hover:bg-purple-100 dark:hover:bg-purple-900 transition"
           aria-label="Mail"
         >
