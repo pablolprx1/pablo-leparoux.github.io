@@ -72,20 +72,20 @@ export function SkillCarousel({ items }: { items: { name: string; img: string }[
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="relative">
+    <div className="relative px-8">
       <div ref={emblaRef} className="overflow-hidden">
-        <div className="flex space-x-6 py-2 items-center justify-center">
+        <div className="flex py-4 items-center justify-center gap-8">
           {items.map(({ name, img }) => (
             <div
               key={name}
-              className="min-w-[110px] flex flex-col items-center justify-center"
+              className="min-w-[120px] flex flex-col items-center justify-center"
             >
               <img
                 src={img}
                 alt={name}
                 className="w-16 h-16 object-contain rounded-lg bg-white shadow hover:scale-105 transition-transform"
               />
-              <span className="mt-2 text-center text-sm text-gray-700 dark:text-gray-200">{name}</span>
+              <span className="mt-3 text-center text-sm text-gray-700 dark:text-gray-200">{name}</span>
             </div>
           ))}
         </div>
@@ -97,7 +97,7 @@ export function SkillCarousel({ items }: { items: { name: string; img: string }[
         size="icon"
         onClick={scrollPrev}
         disabled={!canScrollPrev}
-        className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 h-8 w-8 rounded-full bg-white shadow-md border-gray-200 hover:bg-gray-100"
+        className="absolute left-0 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full bg-white shadow-md border-gray-200 hover:bg-gray-100"
         aria-label="Précédent"
       >
         <ArrowLeft className="h-4 w-4" />
@@ -108,7 +108,7 @@ export function SkillCarousel({ items }: { items: { name: string; img: string }[
         size="icon"
         onClick={scrollNext}
         disabled={!canScrollNext}
-        className="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 h-8 w-8 rounded-full bg-white shadow-md border-gray-200 hover:bg-gray-100"
+        className="absolute right-0 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full bg-white shadow-md border-gray-200 hover:bg-gray-100"
         aria-label="Suivant"
       >
         <ArrowRight className="h-4 w-4" />
