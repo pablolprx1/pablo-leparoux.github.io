@@ -38,7 +38,7 @@ export function SkillCarousel({ items }: { items: { name: string; img: string }[
   const autoplayInterval = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext({ immediate: false });
+    if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
 
   useEffect(() => {
