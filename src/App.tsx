@@ -4,8 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
-import { SidebarProvider } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/AppSidebar";
+import Header from "@/components/Header";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Experiences from "./pages/Experiences";
@@ -14,16 +13,14 @@ import Veille from "./pages/Veille";
 import Projets from "./pages/Projets";
 import Footer from "@/components/Footer";
 
-// Layout qui inclut la sidebar et le footer pour toutes les pages
+// Layout qui inclut entête + footer pour toutes les pages
 function MainLayout() {
   return (
     <div className="min-h-screen flex flex-col w-full">
-      <div className="flex flex-1">
-        <AppSidebar />
-        <main className="flex-1 min-h-screen flex flex-col">
-          <Outlet />
-        </main>
-      </div>
+      <Header />
+      <main className="flex-1 w-full flex flex-col">
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );
@@ -34,23 +31,21 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <SidebarProvider defaultOpen={true} open={true}>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<MainLayout />}>
-              <Route index element={<Index />} />
-              <Route path="projets" element={<Projets />} />
-              <Route path="experiences" element={<Experiences />} />
-              <Route path="parcours" element={<Parcours />} />
-              <Route path="veille" element={<Veille />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </SidebarProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<Index />} />
+            <Route path="projets" element={<Projets />} />
+            <Route path="experiences" element={<Experiences />} />
+            <Route path="parcours" element={<Parcours />} />
+            <Route path="veille" element={<Veille />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );

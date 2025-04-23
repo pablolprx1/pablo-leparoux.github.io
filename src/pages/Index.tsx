@@ -1,12 +1,6 @@
 
 import { Home } from "lucide-react";
-
-const skills = [
-  "HTML", "CSS", "JavaScript", "WebDev", "C#", "SQL", "PHP", "Python"
-];
-const tools = [
-  "WAMP", "GitHub", "GitLab", "MySQL", "VS Code", "Asana"
-];
+import { SkillCarousel, skillsList, toolsList } from "@/components/SkillCarousel";
 
 const Index = () => {
   return (
@@ -25,27 +19,15 @@ const Index = () => {
           alt="Ordinateur portable, portfolio"
         />
 
-        {/* Bloc Compétences */}
-        <div className="w-full max-w-lg mt-8">
-          <h2 className="text-xl font-bold mb-2 text-center">Mes compétences développement</h2>
-          <ul className="flex flex-wrap gap-3 justify-center mb-4">
-            {skills.map(skill => (
-              <li key={skill} className="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-lg text-sm font-semibold">
-                {skill}
-              </li>
-            ))}
-          </ul>
+        {/* Carrousel Compétences */}
+        <div className="w-full max-w-2xl mt-10">
+          <h2 className="text-xl font-bold mb-4 text-center">Mes compétences développement</h2>
+          <SkillCarousel items={skillsList} />
         </div>
-        {/* Bloc Logiciels */}
-        <div className="w-full max-w-lg mt-4">
-          <h2 className="text-xl font-bold mb-2 text-center">Mes logiciels</h2>
-          <ul className="flex flex-wrap gap-3 justify-center">
-            {tools.map(tool => (
-              <li key={tool} className="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-lg text-sm font-semibold">
-                {tool}
-              </li>
-            ))}
-          </ul>
+        {/* Carrousel Logiciels */}
+        <div className="w-full max-w-2xl mt-8">
+          <h2 className="text-xl font-bold mb-4 text-center">Mes logiciels</h2>
+          <SkillCarousel items={toolsList} />
         </div>
       </div>
     </section>
