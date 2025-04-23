@@ -16,12 +16,15 @@ const skills = [
 ];
 
 const tools = [
-  { name: "WAMP", img: "https://upload.wikimedia.org/wikipedia/commons/6/6f/WampServer-logo.png" },
+  { name: "WAMP", img: "https://upload.wikimedia.org/wikipedia/commons/f/f8/WampServer-logo.png" },
   { name: "GitHub", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
   { name: "GitLab", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" },
   { name: "MySQL", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
   { name: "VS Code", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-  { name: "Asana", img: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Asana_logo.svg" },
+  { name: "Asana", img: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Asana_logo.svg" },
+  { name: "UML", img: "https://upload.wikimedia.org/wikipedia/fr/3/32/Staruml_logo.png" },
+  { name: "AGILE", img: "https://cdn-icons-png.flaticon.com/512/3967/3967015.png" },
+
 ];
 
 /**

@@ -46,7 +46,7 @@ const Index = () => {
         {/* Carte Carrousel Logiciels */}
         <div className="bg-white/80 dark:bg-black/60 glass-morphism p-6 rounded-xl shadow-lg w-full transform transition-transform hover:scale-105">
           <h2 className="text-xl font-bold mb-4 text-center text-gray-800 dark:text-gray-100">
-            Mes logiciels
+            Mes logiciels / outils
           </h2>
           <SkillCarousel items={toolsList} />
         </div>
@@ -58,14 +58,14 @@ const Index = () => {
           </h2>
           <div className="flex gap-4">
             <a
-              href="/path/to/cv.pdf"
+              href="/fichiers/CV.pdf"
               download
               className="px-6 py-3 bg-gray-500 text-white font-semibold rounded-full shadow-lg hover:bg-gray-600 transition"
             >
               Télécharger mon CV
             </a>
             <a
-              href="/path/to/tableau-synthese.pdf"
+              href="/fichiers/tableau-de-synthese.xlsx"
               download
               className="px-6 py-3 bg-gray-500 text-white font-semibold rounded-full shadow-lg hover:bg-gray-600 transition"
             >
