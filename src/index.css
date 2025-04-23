@@ -3,6 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Mode clair/foncé : seul le fond change */
+body.light-bg {
+  background: #f4f4f4;
+}
+
+body.dark-bg {
+  background: #222;
+}
+
 /* Glassmorphism, transitions et fade-in/out */
 @layer base {
   .glass-morphism {
