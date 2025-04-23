@@ -3,12 +3,11 @@ import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
-  SidebarGroupContent,
   SidebarGroupLabel,
+  SidebarGroupContent,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarFooter,
 } from "@/components/ui/sidebar";
 import { Home, Briefcase, GraduationCap, Lightbulb } from "lucide-react";
 import { useLocation, Link } from "react-router-dom";
@@ -40,7 +39,7 @@ export function AppSidebar() {
   const location = useLocation();
 
   return (
-    <Sidebar>
+    <Sidebar collapsible="none">
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>MENU</SidebarGroupLabel>
@@ -66,4 +65,3 @@ export function AppSidebar() {
     </Sidebar>
   );
 }
-
