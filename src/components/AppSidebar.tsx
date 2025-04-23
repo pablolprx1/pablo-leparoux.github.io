@@ -9,7 +9,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { Home, Briefcase, GraduationCap, Lightbulb } from "lucide-react";
+import { Home, Briefcase, GraduationCap, Lightbulb, FolderArchive } from "lucide-react";
 import { useLocation, Link } from "react-router-dom";
 
 const menuItems = [
@@ -17,6 +17,11 @@ const menuItems = [
     title: "Accueil",
     url: "/",
     icon: Home,
+  },
+  {
+    title: "Projets",
+    url: "/projets",
+    icon: FolderArchive,
   },
   {
     title: "Expériences pro",

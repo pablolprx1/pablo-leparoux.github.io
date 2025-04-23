@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -36,6 +35,33 @@ const App = () => (
           <Routes>
             <Route path="/" element={<MainLayout />}>
               <Route index element={<Index />} />
+              <Route path="experiences" element={<Experiences />} />
+              <Route path="parcours" element={<Parcours />} />
+              <Route path="veille" element={<Veille />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </SidebarProvider>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
+
+export default App;
+import Projets from "./pages/Projets";
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <SidebarProvider defaultOpen={true} open={true}>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<MainLayout />}>
+              <Route index element={<Index />} />
+              <Route path="projets" element={<Projets />} />
               <Route path="experiences" element={<Experiences />} />
               <Route path="parcours" element={<Parcours />} />
               <Route path="veille" element={<Veille />} />
