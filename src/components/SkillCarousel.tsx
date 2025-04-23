@@ -1,9 +1,8 @@
 
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import { useEffect, useRef } from "react";
 
-// Pour chaque "skill" et chaque "outil", associer une image libre (url externes SVG/png ou images dans /public)
+// Pour chaque compétence et logiciel, associer une image libre (url externes SVG/png ou images dans /public)
 const skills = [
   { name: "HTML", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
   { name: "CSS", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
@@ -21,22 +20,20 @@ const tools = [
   { name: "GitLab", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" },
   { name: "MySQL", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
   { name: "VS Code", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-  { name: "Asana", img: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Asana_logo.svg" }
+  { name: "Asana", img: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Asana_logo.svg" },
 ];
 
 /**
- * Carrousel avec défilement automatique.
- * @param items Liste des éléments à afficher (name + img)
+ * Carrousel compétences/logiciels avec défilement centré automatique.
  */
 export function SkillCarousel({ items }: { items: { name: string; img: string }[] }) {
-  // Embla pour autoplay
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start", skipSnaps: false });
+  // Embla – centrer l’élément actif
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "center", skipSnaps: false });
   const autoplayInterval = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
     if (!emblaApi) return;
 
-    // Démarrer le défilement automatique
     autoplayInterval.current = setInterval(() => {
       if (emblaApi) {
         emblaApi.scrollNext();
@@ -49,13 +46,12 @@ export function SkillCarousel({ items }: { items: { name: string; img: string }[
   }, [emblaApi]);
 
   return (
-    <div ref={emblaRef}>
-      <div className="flex space-x-6 py-2">
+    <div ref={emblaRef} className="overflow-hidden">
+      <div className="flex space-x-6 py-2 items-center justify-center">
         {items.map(({ name, img }) => (
           <div
             key={name}
-            className="basis-auto flex flex-col items-center justify-center"
-            style={{ minWidth: 100 }}
+            className="min-w-[110px] flex flex-col items-center justify-center"
           >
             <img
               src={img}
@@ -70,6 +66,6 @@ export function SkillCarousel({ items }: { items: { name: string; img: string }[
   );
 }
 
-// Exporter les listes pour utilisation ailleurs
+// Exporter les listes pour usage ailleurs
 export const skillsList = skills;
 export const toolsList = tools;
