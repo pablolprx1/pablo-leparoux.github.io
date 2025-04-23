@@ -7,13 +7,13 @@ const Experiences = () => (
       <Briefcase size={32} />
       <h1 className="text-3xl font-bold tracking-tight">Expériences professionnelles</h1>
     </div>
-    <div className="max-w-xl text-lg text-gray-600 dark:text-gray-300 text-center mb-8">
+    {/* <div className="max-w-xl text-lg text-gray-600 dark:text-gray-300 text-center mb-8">
       Ici tu pourras présenter tes expériences en entreprise, stages ou alternance durant ton parcours BTS SIO option SLAM.  
       <br />
       <span className="text-sm opacity-60">
         (Remplace ce texte par tes vraies missions, entreprises, stacks techniques, résultats, etc.)
       </span>
-    </div>
+    </div> */}
     {/* Alternance FOBware SI */}
     <div className="grid gap-6 w-full max-w-2xl">
       <div className="bg-white/80 dark:bg-black/60 glass-morphism p-6 rounded-xl shadow hover-scale transition">

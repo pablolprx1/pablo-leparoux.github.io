@@ -1,4 +1,3 @@
-
 import { Link, useLocation } from "react-router-dom";
 import { Github, Linkedin, Mail, Copy } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
@@ -64,6 +63,7 @@ const Header = () => {
           rel="noopener noreferrer"
           className="p-2 rounded-full hover:scale-110 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
           aria-label="GitHub"
+          title="Voir mon profil GitHub"
         >
           <Github size={20} strokeWidth={2.2} className="text-gray-700 dark:text-gray-200" />
         </a>
@@ -73,6 +73,7 @@ const Header = () => {
           rel="noopener noreferrer"
           className="p-2 rounded-full hover:scale-110 hover:bg-blue-100 dark:hover:bg-blue-900 transition"
           aria-label="LinkedIn"
+          title="Voir mon profil LinkedIn"
         >
           <Linkedin size={20} strokeWidth={2.2} className="text-[#0e76a8]" />
         </a>
@@ -80,9 +81,9 @@ const Header = () => {
           onClick={handleCopyMail}
           className="p-2 rounded-full hover:scale-110 hover:bg-purple-100 dark:hover:bg-purple-900 transition group"
           aria-label="Copier l'adresse e-mail"
+          title="Copier mon adresse e-mail"
         >
           <Mail size={20} strokeWidth={2.2} className="text-violet-400 inline" />
-          <Copy size={12} strokeWidth={2.2} className="inline ml-1 text-gray-400 opacity-60 group-hover:opacity-100 transition-opacity" />
         </button>
       </div>
     </header>

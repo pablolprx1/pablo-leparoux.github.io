@@ -1,3 +1,4 @@
+/* eslint-disable no-irregular-whitespace */
 
 import { GraduationCap } from "lucide-react";
 
@@ -7,12 +8,12 @@ const Parcours = () => (
       <GraduationCap size={32} />
       <h1 className="text-3xl font-bold tracking-tight">Parcours scolaire</h1>
     </div>
-    <div className="max-w-xl text-lg text-gray-600 dark:text-gray-300 text-center mb-8">
-      Mets ici les étapes de ton parcours scolaire : diplômes, établissements, options, etc.<br />
+    {/* <div className="max-w-xl text-lg text-gray-600 dark:text-gray-300 text-center mb-8">
+    Voici un aperçu de mon parcours scolaire, de mes spécialisations et des compétences acquises au fil de mes études. ✍️<br />
       <span className="text-sm opacity-60">
         (Personnalise ce texte pour décrire ton cursus avant et pendant le BTS SIO SLAM)
       </span>
-    </div>
+    </div> */}
     {/* BTS SIO SLAM */}
     <div className="grid gap-6 w-full max-w-2xl">
       <div className="bg-white/80 dark:bg-black/60 glass-morphism p-6 rounded-xl shadow hover-scale transition">
@@ -25,7 +26,7 @@ const Parcours = () => (
       </div>
       {/* BAC */}
       <div className="bg-white/80 dark:bg-black/60 glass-morphism p-6 rounded-xl shadow hover-scale transition">
-        <p className="font-semibold">BAC Général - Lycée Grand-Air 2020-2023</p>
+        <p className="font-semibold">BAC Général — Lycée Grand-Air 2020-2023</p>
         <ul className="list-disc pl-6 text-base">
           <li>Histoire-Géographie, Géopolitique et Sciences politiques</li>
           <li>Scienes économiques et sociales</li>

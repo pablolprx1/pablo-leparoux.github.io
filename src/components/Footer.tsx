@@ -1,4 +1,3 @@
-
 import { Github, Linkedin, Mail, Copy, MapPin } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import React from "react";
@@ -34,6 +33,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="p-1.5 rounded-full hover:bg-gray-100 transition"
             aria-label="GitHub"
+            title="Voir mon profil GitHub"
           >
             <Github size={17} className="text-gray-700" />
           </a>
@@ -43,6 +43,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="p-1.5 rounded-full hover:bg-blue-100 transition"
             aria-label="LinkedIn"
+            title="Voir mon profil LinkedIn"
           >
             <Linkedin size={17} className="text-[#0e76a8]" />
           </a>
@@ -50,10 +51,10 @@ const Footer = () => {
             onClick={handleCopyMail}
             className="p-1.5 rounded-full hover:bg-purple-100 transition group"
             aria-label="Copier l'adresse e-mail"
+            title="Copier mon adresse e-mail"
             type="button"
           >
             <Mail size={17} className="text-violet-500 inline" />
-            <Copy size={12} className="inline ml-1 text-gray-400 opacity-60 group-hover:opacity-100 transition-opacity" />
           </button>
         </div>
         
