@@ -1,5 +1,5 @@
 
-import { Github, Linkedin, Mail, MapPin, Copy } from "lucide-react";
+import { Github, Linkedin, Mail, Copy, MapPin } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import React from "react";
 
@@ -16,7 +16,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full bg-white border-t border-gray-200 px-6 py-4 shadow-inner">
+    <footer className="w-full bg-transparent px-6 py-4">
       <div className="max-w-screen-lg mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         {/* Logo et nom à gauche */}
         <div className="flex items-center gap-3">

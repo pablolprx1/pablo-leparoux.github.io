@@ -1,6 +1,8 @@
 
 import useEmblaCarousel from "embla-carousel-react";
-import { useEffect, useRef, useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 // Pour chaque compétence et logiciel, associer une image libre (url externes SVG/png ou images dans /public)
 const skills = [
@@ -24,21 +26,32 @@ const tools = [
 ];
 
 /**
- * Carrousel compétences/logiciels avec défilement centré automatique.
+ * Carrousel compétences/logiciels avec navigation manuelle.
  */
 export function SkillCarousel({ items }: { items: { name: string; img: string }[] }) {
-  // Embla – configuration avec alignement centré et animation fluide
+  // Embla – configuration avec alignement centré
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
     loop: true, 
     align: "center", 
     skipSnaps: false,
-    dragFree: true
   });
   
-  const autoplayInterval = useRef<ReturnType<typeof setInterval> | null>(null);
-
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+  
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+  
   const scrollNext = useCallback(() => {
     if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+  
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
   }, [emblaApi]);
 
   useEffect(() => {
@@ -46,32 +59,60 @@ export function SkillCarousel({ items }: { items: { name: string; img: string }[
     
     // Initialisation du carrousel
     emblaApi.reInit();
+    onSelect();
     
-    // Démarre le défilement automatique
-    autoplayInterval.current = setInterval(scrollNext, 2000);
-
+    // Ajout des event listeners pour mettre à jour les états des boutons
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+    
     return () => {
-      if (autoplayInterval.current) clearInterval(autoplayInterval.current);
+      emblaApi.off("select", onSelect);
+      emblaApi.off("reInit", onSelect);
     };
-  }, [emblaApi, scrollNext]);
+  }, [emblaApi, onSelect]);
 
   return (
-    <div ref={emblaRef} className="overflow-hidden">
-      <div className="flex space-x-6 py-2 items-center justify-center">
-        {items.map(({ name, img }) => (
-          <div
-            key={name}
-            className="min-w-[110px] flex flex-col items-center justify-center"
-          >
-            <img
-              src={img}
-              alt={name}
-              className="w-16 h-16 object-contain rounded-lg bg-white shadow hover:scale-105 transition-transform"
-            />
-            <span className="mt-2 text-center text-sm text-gray-700 dark:text-gray-200">{name}</span>
-          </div>
-        ))}
+    <div className="relative">
+      <div ref={emblaRef} className="overflow-hidden">
+        <div className="flex space-x-6 py-2 items-center justify-center">
+          {items.map(({ name, img }) => (
+            <div
+              key={name}
+              className="min-w-[110px] flex flex-col items-center justify-center"
+            >
+              <img
+                src={img}
+                alt={name}
+                className="w-16 h-16 object-contain rounded-lg bg-white shadow hover:scale-105 transition-transform"
+              />
+              <span className="mt-2 text-center text-sm text-gray-700 dark:text-gray-200">{name}</span>
+            </div>
+          ))}
+        </div>
       </div>
+      
+      {/* Boutons de navigation */}
+      <Button
+        variant="outline"
+        size="icon"
+        onClick={scrollPrev}
+        disabled={!canScrollPrev}
+        className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 h-8 w-8 rounded-full bg-white shadow-md border-gray-200 hover:bg-gray-100"
+        aria-label="Précédent"
+      >
+        <ArrowLeft className="h-4 w-4" />
+      </Button>
+      
+      <Button
+        variant="outline" 
+        size="icon"
+        onClick={scrollNext}
+        disabled={!canScrollNext}
+        className="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 h-8 w-8 rounded-full bg-white shadow-md border-gray-200 hover:bg-gray-100"
+        aria-label="Suivant"
+      >
+        <ArrowRight className="h-4 w-4" />
+      </Button>
     </div>
   );
 }
