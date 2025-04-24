@@ -5,7 +5,8 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: '/noir-et-blanc-folio/', // Ajustez ceci pour correspondre à votre nom de dépôt
+  base: '/pablo-leparoux.github.io/', // Ajustez ceci pour correspondre à votre nom de dépôt
+
   server: {
     host: "::",
     port: 8080,
