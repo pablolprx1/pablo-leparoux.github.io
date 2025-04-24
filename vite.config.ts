@@ -1,11 +1,10 @@
-
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: '/pablo-leparoux.github.io/', // Set the correct base path for GitHub Pages domain
+  base: '/noir-et-blanc-folio/', // Set the correct base path for GitHub Pages domain
   server: {
     host: "::",
     port: 8080,
@@ -27,7 +26,8 @@ export default defineConfig(({ mode }) => ({
       compress: {
         evaluate: false,
         drop_console: false,
-        drop_debugger: false
+        drop_debugger: false,
+        passes: 2
       },
       mangle: {
         safari10: true,
@@ -35,6 +35,12 @@ export default defineConfig(({ mode }) => ({
       format: {
         comments: false,
       },
+    },
+    rollupOptions: {
+      output: {
+        format: 'es',
+        inlineDynamicImports: false,
+      }
     }
   }
 }));
