@@ -1,0 +1,9 @@
+AddType application/javascript .js
+AddType application/javascript .mjs
+AddType application/javascript .ts
+AddType application/javascript .tsx
+
+# Enable CORS
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+Header set Access-Control-Allow-Headers "Content-Type" 

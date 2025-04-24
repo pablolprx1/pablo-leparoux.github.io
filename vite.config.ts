@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: '/noir-et-blanc-folio/', // Set the correct base path for GitHub Pages domain
+  base: '/pablo-leparoux.github.io/', // Correction de l'URL de base
   server: {
     host: "::",
     port: 8080,
@@ -40,6 +40,9 @@ export default defineConfig(({ mode }) => ({
       output: {
         format: 'es',
         inlineDynamicImports: false,
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
       }
     }
   }
