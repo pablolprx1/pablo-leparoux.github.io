@@ -5,8 +5,8 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: '/pablo-leparoux.github.io/', // Ajustez ceci pour correspondre à votre nom de dépôt
-
+  // Use the GitHub username and repository name format
+  base: '/', // Remove specific repository reference to make it work at root level
   server: {
     host: "::",
     port: 8080,
@@ -24,7 +24,7 @@ export default defineConfig(({ mode }) => ({
     minify: 'terser',
     terserOptions: {
       compress: {
-        // Désactive l'utilisation de l'évaluation lors de la minification
+        // Disable evaluation during minification to avoid CSP issues
         evaluate: false
       }
     }
