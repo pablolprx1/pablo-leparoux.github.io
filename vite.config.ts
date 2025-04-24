@@ -24,9 +24,17 @@ export default defineConfig(({ mode }) => ({
     minify: 'terser',
     terserOptions: {
       compress: {
-        // Disable evaluation during minification to avoid CSP issues
-        evaluate: false
-      }
+        // Disable all evaluation during minification to avoid CSP issues
+        evaluate: false,
+        drop_console: false,
+        drop_debugger: false
+      },
+      mangle: {
+        safari10: true,
+      },
+      format: {
+        comments: false,
+      },
     }
   }
 }));
