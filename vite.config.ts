@@ -45,5 +45,10 @@ export default defineConfig(({ mode }) => ({
         assetFileNames: 'assets/[name]-[hash].[ext]'
       }
     }
+  },
+  // Configuration spécifique pour Lovable
+  optimizeDeps: {
+    include: ['react', 'react-dom'],
+    exclude: ['lovable-tagger']
   }
 }));
