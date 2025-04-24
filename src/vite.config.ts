@@ -5,7 +5,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: '/', // Removed specific repository reference to make it work at root level
+  base: '/',
   server: {
     host: "::",
     port: 8080,
@@ -20,10 +20,11 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
     minify: 'terser',
     terserOptions: {
       compress: {
-        // Completely disable evaluation during minification
         evaluate: false,
         drop_console: false,
         drop_debugger: false
