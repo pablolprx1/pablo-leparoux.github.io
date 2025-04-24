@@ -5,7 +5,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: '/noir-et-blanc-folio/', // Adjust this to match your repository name
+  base: '/noir-et-blanc-folio/', // Ajustez ceci pour correspondre à votre nom de dépôt
   server: {
     host: "::",
     port: 8080,
@@ -19,4 +19,13 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        // Désactive l'utilisation de l'évaluation lors de la minification
+        evaluate: false
+      }
+    }
+  }
 }));
