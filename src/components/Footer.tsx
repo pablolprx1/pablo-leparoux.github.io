@@ -20,7 +20,7 @@ const Footer = () => {
         {/* Logo et nom à gauche */}
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 bg-gradient-to-br from-primary/80 to-violet-400 rounded-full flex items-center justify-center shadow border border-white/30">
-            <span className="text-base font-bold text-primary drop-shadow-sm">SL</span>
+            <span className="text-base font-bold text-primary drop-shadow-sm">PL</span>
           </div>
           <span className="font-bold text-gray-700 tracking-tight text-sm">Pablo LEPAROUX</span>
         </div>

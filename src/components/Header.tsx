@@ -29,7 +29,7 @@ const Header = () => {
       <div className="flex items-center gap-2">
         {/* Logo rond minimaliste */}
         <div className="w-9 h-9 bg-gradient-to-br from-primary/70 to-violet-300 rounded-full flex items-center justify-center mr-2 shadow-md border border-white/40">
-          <span className="text-lg font-bold text-primary drop-shadow-sm">SL</span>
+          <span className="text-lg font-bold text-primary drop-shadow-sm">PL</span>
         </div>
         <span className="text-xl font-extrabold tracking-tight bg-gradient-to-br from-primary to-violet-700 bg-clip-text text-transparent select-none drop-shadow-sm">Portfolio BTS SIO SLAM</span>
       </div>

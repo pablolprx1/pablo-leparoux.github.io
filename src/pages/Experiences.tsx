@@ -30,7 +30,7 @@ const Experiences = () => (
         <p className="font-semibold">Stage Développeur Web - FOBware SI</p>
         <p className="text-gray-500 dark:text-gray-300 text-sm mb-1">Mai 2024 - Juin 2024</p>
         <ul className="list-disc pl-6 text-base">
-          <li>Apprentissage de langages/frameworks (Python Django/JSS)</li>
+          <li>Apprentissage de langages/frameworks (Python Django/JS)</li>
           <li>Développement d’un site de gestion de charge/capacité</li>
         </ul>
       </div>

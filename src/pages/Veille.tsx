@@ -25,7 +25,7 @@ const Veille = () => (
                 rel="noopener noreferrer" 
                 className="text-blue-500 hover:underline"
               >
-                Réalisation du tutoriel sur le site officiel
+                Formation à l'aide du tutoriel Django sur le site officiel
               </a>
             </li>
             <li>
@@ -51,7 +51,7 @@ const Veille = () => (
                 rel="noopener noreferrer" 
                 className="text-blue-500 hover:underline"
               >
-                Réalisation du tutoriel WEBDEV sur le site officiel
+                Formation à l'aide du tutoriel WEBDEV sur le site officiel
               </a>
             </li>
             <li>
