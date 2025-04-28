@@ -33,13 +33,13 @@ const Header = () => {
         </div>
         <span className="text-xl font-extrabold tracking-tight bg-gradient-to-br from-primary to-violet-700 bg-clip-text text-transparent select-none drop-shadow-sm">Portfolio BTS SIO SLAM</span>
       </div>
-      <nav className="flex-1 ml-8">
-        <ul className="flex gap-2 justify-center items-center">
+      <nav className="flex-1 mx-auto px-4">
+        <ul className="flex gap-4 justify-center items-center">
           {menuLinks.map(link => (
-            <li key={link.label}>
+            <li key={link.label} className="flex-shrink-0">
               <Link
                 to={link.to}
-                className={`relative px-4 py-1 font-medium rounded-full transition-all duration-200 text-sm md:text-base
+                className={`relative px-4 py-1 font-medium rounded-full transition-all duration-200 text-sm md:text-base text-center
                   ${
                     location.pathname === link.to
                       ? "bg-gradient-to-r from-primary/60 via-violet-400/60 to-slate-200/60 text-primary shadow"
@@ -47,7 +47,6 @@ const Header = () => {
                   }
                   hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300 after:origin-bottom-left after:content-[''] after:block after:w-full after:h-0.5 after:bg-violet-400 after:absolute after:left-0 after:bottom-0
                 `}
-                style={{minWidth: '105px'}}
               >
                 {link.label}
               </Link>
