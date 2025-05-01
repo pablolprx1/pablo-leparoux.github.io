@@ -12,7 +12,7 @@ const skills = [
   { name: "SQL", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
   { name: "PHP", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
   { name: "Python", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-  { name: "WLangage", img: "https://www.windev.com/img/logos/logo-pcsoft-2022.svg" },
+  { name: "WLangage", img: "https://media.glassdoor.com/sqll/1109962/pc-soft-squarelogo-1516278246885.png" },
 ];
 
 const tools = [

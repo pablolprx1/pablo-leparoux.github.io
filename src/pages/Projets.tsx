@@ -5,21 +5,21 @@ import { Card, CardContent } from "@/components/ui/card";
 const projects = [
   {
     title: "Application web de gestion de projets",
-    description: "Application web pour organiser, suivre et partager des tâches en équipe.",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg",
-    url: "https://github.com/pablolprx1/gestion-projets",
+    description: "Application web pour organiser, suivre et partager des tâches en équipe. Développée en PHP avec le framework Laravel.",
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png",
+    url: "https://github.com/pablolprx1/plGestionTache",
   },
   {
     title: "Portfolio BTS SIO",
-    description: "Portfolio interactif développé en React et Tailwind pour présenter mon cursus et mes compétences.",
+    description: "Portfolio développé en React et Tailwind pour présenter mon cursus et mes compétences.",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    url: "https://github.com/pablolprx1/portfolio-bts",
+    url: "https://github.com/pablolprx1/pablo-leparoux.github.io",
   },
   {
     title: "API REST pour un cabinet infirmier",
-    description: "Service REST pour la base de données d'un cabinet infirmier.",
+    description: "API Rest pour les services d'un cabinet infirmier développé en Python à l'aide du framework FastAPI.",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-    url: "https://github.com/pablolprx1/api-cabinet-infirmier",
+    url: "https://github.com/pablolprx1/plGestionInfirmieres",
   },
 ];
 
