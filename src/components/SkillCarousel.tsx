@@ -1,4 +1,3 @@
-
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -13,7 +12,7 @@ const skills = [
   { name: "SQL", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
   { name: "PHP", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
   { name: "Python", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-  { name: "WLangage", img: "https://www.pcsoft.fr/img/logo/pcsoft-logo-vertical.png" },
+  { name: "WLangage", img: "https://www.windev.com/img/logos/logo-pcsoft-2022.svg" },
 ];
 
 const tools = [
@@ -23,9 +22,8 @@ const tools = [
   { name: "MySQL", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
   { name: "VS Code", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
   { name: "Asana", img: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Asana_logo.svg" },
-  { name: "UML", img: "https://upload.wikimedia.org/wikipedia/fr/3/32/Staruml_logo.png" },
+  { name: "UML", img: "https://upload.wikimedia.org/wikipedia/commons/d/d5/UML_logo.svg" },
   { name: "AGILE", img: "https://cdn-icons-png.flaticon.com/512/3967/3967015.png" },
-
 ];
 
 /**

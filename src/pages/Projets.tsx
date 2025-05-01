@@ -6,19 +6,19 @@ const projects = [
   {
     title: "Application web de gestion de projets",
     description: "Application web pour organiser, suivre et partager des tâches en équipe.",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain-wordmark.svg",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg",
     url: "https://github.com/pablolprx1/gestion-projets",
   },
   {
     title: "Portfolio BTS SIO",
     description: "Portfolio interactif développé en React et Tailwind pour présenter mon cursus et mes compétences.",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     url: "https://github.com/pablolprx1/portfolio-bts",
   },
   {
     title: "API REST pour un cabinet infirmier",
     description: "Service REST pour la base de données d'un cabinet infirmier.",
-    img: "https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     url: "https://github.com/pablolprx1/api-cabinet-infirmier",
   },
 ];
@@ -40,11 +40,11 @@ const Projets = () => (
         >
           <Card className="flex gap-4 bg-white/80 dark:bg-black/60 glass-morphism p-4 rounded-xl shadow hover:shadow-lg transition">
             <CardContent className="p-0 flex items-center gap-4 w-full">
-              <div className="flex-shrink-0 w-24 h-24 flex items-center justify-center">
+              <div className="flex-shrink-0 w-16 h-16 flex items-center justify-center bg-white rounded-lg">
                 <img 
                   src={project.img} 
                   alt={`Logo ${project.title}`} 
-                  className="w-20 h-20 object-contain" 
+                  className="w-12 h-12 object-contain" 
                 />
               </div>
               <div className="flex-grow">
