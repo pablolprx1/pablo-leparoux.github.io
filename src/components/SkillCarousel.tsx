@@ -1,3 +1,4 @@
+
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -12,7 +13,7 @@ const skills = [
   { name: "SQL", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
   { name: "PHP", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
   { name: "Python", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-  { name: "WebDev", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  { name: "WLangage", img: "https://www.pcsoft.fr/img/logo/pcsoft-logo-vertical.png" },
 ];
 
 const tools = [
