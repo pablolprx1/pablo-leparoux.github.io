@@ -7,9 +7,9 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 const menuLinks = [
   { label: "Accueil", to: "/" },
-  { label: "Projets", to: "/projets" },
-  { label: "Expériences pro", to: "/experiences" },
   { label: "Parcours", to: "/parcours" },
+  { label: "Expériences pro", to: "/experiences" },
+  { label: "Projets", to: "/projets" },
   { label: "Veille technologique", to: "/veille" },
 ];
 

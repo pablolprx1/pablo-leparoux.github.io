@@ -29,6 +29,10 @@ const Projets = () => (
       <FolderArchive size={32} />
       <h1 className="text-3xl font-bold tracking-tight">Projets</h1>
     </div>
+    <div className="max-w-xl text-lg text-gray-600 dark:text-gray-300 text-center mb-8">
+      Découvrez mes différents projets réalisés durant ma formation BTS SIO et en parallèle.
+      Cliquez sur les cartes pour accéder aux dépôts GitHub correspondants.
+    </div>
     <div className="grid gap-6 w-full max-w-2xl">
       {projects.map((project) => (
         <a 
