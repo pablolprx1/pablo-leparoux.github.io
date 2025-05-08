@@ -24,6 +24,13 @@ const articles = [
     source: "iQuesta",
     url: "https://www.iquesta.com/Article-Lia-Et-Lavenir-Des-Developpeurs-En-Informatique-Quoi-Attendre-228.html",
     date: "2023"
+  },
+  {
+    title: "Faire évoluer le métier de développeur avec l’IA générative",
+    description: "L’intelligence artificielle générative représente une avancée technologique majeure qui bouleverse de nombreux domaines professionnels.",
+    source: "Synapse",
+    url: "https://www.synapse-developpement.fr/blog/ia/faire-evoluer-le-metier-de-developpeur-avec-lia-generative/",
+    date: "2024"
   }
 ];
 

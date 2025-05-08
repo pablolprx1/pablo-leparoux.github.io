@@ -5,19 +5,20 @@ import { Card, CardContent } from "@/components/ui/card";
 const projects = [
   {
     title: "Application web de gestion de projets",
-    description: "Application web pour organiser, suivre et partager des tâches en équipe. Développée en PHP avec le framework Laravel.",
+    description: [
+      "Cette application web permet de créer, modifier et supprimer des projets.", <br />,
+      "La gestion des projets comprend une gestion des tâches et des collaborateurs.", <br />,
+      "Cette application a été développée à l'aide de PHP et du framework Laravel, ainsi que de JavaScript.",
+    ],
     img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png",
     url: "https://github.com/pablolprx1/plGestionTache",
   },
   {
-    title: "Portfolio BTS SIO",
-    description: "Portfolio développé en React et Tailwind pour présenter mon cursus et mes compétences.",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    url: "https://github.com/pablolprx1/pablo-leparoux.github.io",
-  },
-  {
     title: "API REST pour un cabinet infirmier",
-    description: "API Rest pour les services d'un cabinet infirmier développé en Python à l'aide du framework FastAPI.",
+    description: [
+      "Cette API permet de gérer les services d'un cabinet infirmier. ",
+      "Elle est développée en Python à l'aide du framework FastAPI.",
+    ],
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     url: "https://github.com/pablolprx1/plGestionInfirmieres",
   },
