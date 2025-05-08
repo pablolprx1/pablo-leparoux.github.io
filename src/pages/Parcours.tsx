@@ -10,7 +10,7 @@ const Parcours = () => (
       <h1 className="text-3xl font-bold tracking-tight">Parcours scolaire</h1>
     </div>
     <div className="max-w-xl text-lg text-gray-600 dark:text-gray-300 text-center mb-8">
-      Voici un aperçu de mon parcours scolaire, de mes spécialisations et des compétences acquises au fil de mes études.
+      Un aperçu de mon parcours scolaire depuis le BAC.
     </div>
     {/* BTS SIO SLAM */}
     <div className="grid gap-6 w-full max-w-2xl">

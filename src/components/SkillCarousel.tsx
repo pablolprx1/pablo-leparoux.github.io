@@ -23,7 +23,7 @@ const tools = [
   { name: "VS Code", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
   { name: "Asana", img: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Asana_logo.svg" },
   { name: "UML", img: "https://upload.wikimedia.org/wikipedia/commons/d/d5/UML_logo.svg" },
-  { name: "AGILE", img: "https://cdn-icons-png.flaticon.com/512/3967/3967015.png" },
+  { name: "DBEaver", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/DBeaver_logo.svg/2048px-DBeaver_logo.svg.png" },
 ];
 
 /**

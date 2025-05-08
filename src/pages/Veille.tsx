@@ -8,36 +8,10 @@ const Veille = () => (
       <h1 className="text-3xl font-bold tracking-tight">Veille technologique</h1>
     </div>
     <div className="max-w-xl text-lg text-gray-600 dark:text-gray-300 text-center mb-8">
-      Voici les technologies sur lesquelles je me forme régulièrement pour rester à jour
-      et développer continuellement mes compétences.
+      L'évolution des métiers de l'informatique avec l'émergence de l'IA
     </div>
     {/* Python Django */}
     <div className="grid gap-6 w-full max-w-2xl">
-      <div className="bg-white/80 dark:bg-black/60 glass-morphism p-6 rounded-xl shadow hover-scale transition">
-        <p className="font-semibold mb-1">Veille sur le framework Python Django</p>
-          <ul className="list-disc pl-6 text-base">
-            <li>
-              <a 
-                href="https://www.djangoproject.com/start/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-blue-500 hover:underline"
-              >
-                Formation à l'aide du tutoriel Django sur le site officiel
-              </a>
-            </li>
-            <li>
-              <a 
-                href="https://www.youtube.com/watch?v=LxEFgfPdhDg&list=PLEn9o0UAh_cCszR1kXFAe-4lxkJjCnAiH" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-blue-500 hover:underline"
-              >
-                Formation via des vidéos YouTube
-              </a>
-            </li>
-        </ul>
-      </div>
       {/* WinDev + WLangage */}
       <div className="bg-white/80 dark:bg-black/60 glass-morphism p-6 rounded-xl shadow hover-scale transition">
         <p className="font-semibold mb-1">Veille sur le WLangage de la suite PCSOFT</p>

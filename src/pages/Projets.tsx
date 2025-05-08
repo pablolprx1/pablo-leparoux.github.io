@@ -30,8 +30,7 @@ const Projets = () => (
       <h1 className="text-3xl font-bold tracking-tight">Projets</h1>
     </div>
     <div className="max-w-xl text-lg text-gray-600 dark:text-gray-300 text-center mb-8">
-      Découvrez mes différents projets réalisés durant ma formation BTS SIO et en parallèle.
-      Cliquez sur les cartes pour accéder aux dépôts GitHub correspondants.
+      Voici les projets personnels que j'ai réalisé et qui mettent en avant les compétences que j'ai acquit durant ces deux années de BTS SIO.
     </div>
     <div className="grid gap-6 w-full max-w-2xl">
       {projects.map((project) => (
