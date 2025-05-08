@@ -24,20 +24,6 @@ const articles = [
     source: "iQuesta",
     url: "https://www.iquesta.com/Article-Lia-Et-Lavenir-Des-Developpeurs-En-Informatique-Quoi-Attendre-228.html",
     date: "2023"
-  },
-  {
-    title: "Formation au WLangage",
-    description: "Tutoriel WEBDEV pour apprendre le langage de programmation de la suite PCSOFT",
-    source: "PCSOFT Documentation",
-    url: "https://doc.pcsoft.fr/fr-FR/?1410087510&verdisp=290",
-    date: "2024"
-  },
-  {
-    title: "WINDEV TECH TOUR 2025",
-    description: "Présentation des nouveautés de la suite PCSOFT pour 2025",
-    source: "PCSOFT",
-    url: "https://pcsoft.fr/annonce2025/index.html",
-    date: "2025"
   }
 ];
 
@@ -48,7 +34,7 @@ const Veille = () => (
       <h1 className="text-3xl font-bold tracking-tight">Veille technologique</h1>
     </div>
     <div className="max-w-3xl text-lg text-gray-600 dark:text-gray-300 text-center mb-8">
-      L'évolution des métiers de l'informatique avec l'émergence de l'IA et ma formation au WLangage
+      L'évolution des métiers de l'informatique avec l'émergence de l'IA
     </div>
     
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl px-4">
