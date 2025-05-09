@@ -25,7 +25,14 @@ const articles = [
     source: "Synapse",
     url: "https://www.synapse-developpement.fr/blog/ia/faire-evoluer-le-metier-de-developpeur-avec-lia-generative/",
     date: "2024"
-  }
+  },
+    {
+    title: "OpenAI s’offre Windsurf pour 3 milliards de dollars, sa plus importante acquisition",
+    description: "OpenAI rachète la start-up Windsurf pour 3 milliards de dollars, sa plus grande acquisition à ce jour, afin de renforcer ses outils d’IA pour le codage.",
+    source: "l'Echo",
+    url: "https://www.lecho.be/entreprises/tech-science/openai-s-offre-windsurf-pour-3-milliards-de-dollars-sa-plus-importante-acquisition/10605900.html",
+    date: "2025"
+  },
 ];
 
 const Veille = () => (
@@ -43,7 +50,7 @@ const Veille = () => (
         </div>
         <Separator className="w-1/3 bg-gradient-to-r from-transparent via-violet-300 dark:via-violet-700 to-transparent h-0.5 my-1" />
         <div className="max-w-3xl text-lg text-gray-600 dark:text-gray-300 text-center mb-4">
-          L'évolution des métiers de l'informatique avec l'émergence de l'IA
+          L'évolution du métier de développeur informatique avec l'émergence de l'IA
         </div>
       </div>
       
