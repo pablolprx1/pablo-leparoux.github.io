@@ -11,6 +11,7 @@ import Experiences from "./pages/Experiences";
 import Parcours from "./pages/Parcours";
 import Veille from "./pages/Veille";
 import Projets from "./pages/Projets";
+import ProjectDetail from "./pages/ProjectDetail";
 import MentionsLegales from "./pages/MentionsLegales";
 import Footer from "@/components/Footer";
 
@@ -39,6 +40,7 @@ const App = () => (
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Index />} />
             <Route path="projets" element={<Projets />} />
+            <Route path="projets/:projectId" element={<ProjectDetail />} />
             <Route path="experiences" element={<Experiences />} />
             <Route path="parcours" element={<Parcours />} />
             <Route path="veille" element={<Veille />} />
