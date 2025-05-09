@@ -16,7 +16,7 @@ const Index = () => {
           <div className="flex flex-col items-center gap-2 mb-4">
             <h1 className="text-2xl font-extrabold tracking-tight">Pablo LEPAROUX</h1>
             <p className="text-sm text-gray-500 dark:text-gray-300">
-              Développeur Web FullStack | Étudiant en BTS SIO SLAM
+              Apprenti développeur web en alternance chez FOBware SI
             </p>
           </div>
           <div className="flex flex-col items-center">
