@@ -1,12 +1,9 @@
-
 import { FolderArchive } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
   Dialog,
   DialogContent,
-  DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { useState } from "react";
@@ -52,18 +49,11 @@ const Projets = () => {
       {/* Asana Dialog */}
       <Dialog open={openDialog} onOpenChange={setOpenDialog}>
         <DialogContent className="max-w-4xl p-0">
-          <DialogHeader className="p-4 border-b">
-            <DialogTitle className="text-xl flex items-center gap-2">
-              <AsanaIcon className="h-5 w-5" /> Asana - Gestion de projet
-            </DialogTitle>
-          </DialogHeader>
-          <div>
-            <img 
-              src="/lovable-uploads/a7617b64-ed2d-42a7-92e2-c9a71e62b401.png" 
-              alt="Screenshot Asana" 
-              className="w-full" 
-            />
-          </div>
+          <img 
+            src="/lovable-uploads/a7617b64-ed2d-42a7-92e2-c9a71e62b401.png" 
+            alt="Screenshot Asana" 
+            className="w-full" 
+          />
         </DialogContent>
       </Dialog>
       
