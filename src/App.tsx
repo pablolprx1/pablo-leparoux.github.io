@@ -11,6 +11,7 @@ import Experiences from "./pages/Experiences";
 import Parcours from "./pages/Parcours";
 import Veille from "./pages/Veille";
 import Projets from "./pages/Projets";
+import MentionsLegales from "./pages/MentionsLegales";
 import Footer from "@/components/Footer";
 
 // Layout qui inclut entête + footer pour toutes les pages
@@ -41,6 +42,7 @@ const App = () => (
             <Route path="experiences" element={<Experiences />} />
             <Route path="parcours" element={<Parcours />} />
             <Route path="veille" element={<Veille />} />
+            <Route path="mentions-legales" element={<MentionsLegales />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Route>

@@ -1,6 +1,8 @@
+
 import { Github, Linkedin, Mail, Copy, MapPin } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const email = "leparouxpablo@gmail.com";
 
@@ -58,12 +60,16 @@ const Footer = () => {
           </button>
         </div>
         
-        {/* Ville & copyright à droite */}
+        {/* Ville, copyright et mentions légales à droite */}
         <div className="flex items-center gap-2 text-xs text-gray-700 opacity-80 font-medium">
           <MapPin size={13} className="opacity-70" />
           <span>Nantes, France</span>
           <span className="mx-1">|</span>
           <span className="opacity-60">© {new Date().getFullYear()}</span>
+          <span className="mx-1">|</span>
+          <Link to="/mentions-legales" className="hover:underline hover:text-primary transition-colors">
+            Mentions légales
+          </Link>
         </div>
       </div>
     </footer>
