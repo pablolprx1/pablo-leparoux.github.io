@@ -1,5 +1,6 @@
 
 import { Briefcase } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 const Experiences = () => (
   <section className="w-full flex flex-col items-center justify-center flex-1 fade-in pt-12">
@@ -20,8 +21,27 @@ const Experiences = () => (
           <li>Passage en API d'une application interne de gestion de tâches</li>
           <li>Ticketting</li>
           <li>Réalisation de pages sur le site interne de gestion d'entreprise</li>
-          <li>Outils utilisés : Asana, Suite PCSoft, MySQL Workbench</li>
         </ul>
+        <div className="flex flex-wrap gap-2 mt-3">
+          <Badge 
+            variant="secondary" 
+            className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+          >
+            Asana
+          </Badge>
+          <Badge 
+            variant="secondary" 
+            className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+          >
+            Suite PCSoft
+          </Badge>
+          <Badge 
+            variant="secondary" 
+            className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+          >
+            MySQL Workbench
+          </Badge>
+        </div>
       </div>
       {/* Stage FOBware SI */}
       <div className="bg-white/80 dark:bg-black/60 glass-morphism p-6 rounded-xl shadow hover-scale transition">
@@ -31,8 +51,33 @@ const Experiences = () => (
           <li>Formation sur les langages de programmation Python et JS et le framework Django</li>
           <li>Apprentissage de la méthode en mode projet de l'entreprise</li>
           <li>Développement d'un site de gestion de charge/capacité</li>
-          <li>Outils utiliés : Asana, GitLab, DBeaver, VS Code</li>
         </ul>
+        <div className="flex flex-wrap gap-2 mt-3">
+          <Badge 
+            variant="secondary" 
+            className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+          >
+            Asana
+          </Badge>
+          <Badge 
+            variant="secondary" 
+            className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+          >
+            GitLab
+          </Badge>
+          <Badge 
+            variant="secondary" 
+            className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+          >
+            DBeaver
+          </Badge>
+          <Badge 
+            variant="secondary" 
+            className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+          >
+            VS Code
+          </Badge>
+        </div>
       </div>
     </div>
   </section>
