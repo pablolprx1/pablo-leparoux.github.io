@@ -77,7 +77,7 @@ const projects = [
     ],
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     url: "https://github.com/pablolprx1/plGestionInfirmieres",
-    tools: ["Asana", "GitHub", "VS Code", "MySQL Workbench"],
+    tools: ["Asana", "GitHub", "VS Code", "MySQL Workbench", "Postman"],
     longDescription: "Cette API REST est conçue pour optimiser la gestion quotidienne d'un cabinet infirmier. Développée avec Python et le framework FastAPI, elle offre des endpoints permettant de gérer les patients, les rendez-vous, les soins et le personnel soignant. L'API intègre un système d'authentification et d'autorisation pour sécuriser l'accès aux données sensibles des patients. La documentation complète de l'API est générée automatiquement via Swagger UI.",
     features: [
       "Authentification en tant que patient ou infirmière",
