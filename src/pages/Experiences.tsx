@@ -26,17 +26,17 @@ const Experiences = () => {
       
       {/* Asana Dialog */}
       <Dialog open={openDialog} onOpenChange={setOpenDialog}>
-        <DialogContent className="max-w-4xl">
-          <DialogHeader>
+        <DialogContent className="max-w-4xl p-0">
+          <DialogHeader className="p-4 border-b">
             <DialogTitle className="text-xl flex items-center gap-2">
               <AsanaIcon className="h-5 w-5" /> Asana - Gestion de projet
             </DialogTitle>
           </DialogHeader>
-          <div className="mt-4">
+          <div>
             <img 
               src="/lovable-uploads/a7617b64-ed2d-42a7-92e2-c9a71e62b401.png" 
               alt="Screenshot Asana" 
-              className="w-full rounded-md border border-gray-200 dark:border-gray-800" 
+              className="w-full" 
             />
           </div>
         </DialogContent>
