@@ -1,6 +1,7 @@
 
 import { FolderArchive } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const projects = [
   {
@@ -12,6 +13,7 @@ const projects = [
     ],
     img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png",
     url: "https://github.com/pablolprx1/plGestionTache",
+    tools: ["Asana", "GitHub", "VS Code", "MySQL Workbench"],
   },
   {
     title: "API REST pour un cabinet infirmier",
@@ -21,6 +23,7 @@ const projects = [
     ],
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     url: "https://github.com/pablolprx1/plGestionInfirmieres",
+    tools: ["Asana", "GitHub", "VS Code", "MySQL Workbench"],
   },
 ];
 
@@ -54,6 +57,17 @@ const Projets = () => (
               <div className="flex-grow">
                 <p className="text-lg font-semibold mb-1">{project.title}</p>
                 <p className="text-sm text-gray-600 dark:text-gray-300">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mt-3">
+                  {project.tools.map((tool) => (
+                    <Badge 
+                      key={`${project.title}-${tool}`} 
+                      variant="secondary" 
+                      className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+                    >
+                      {tool}
+                    </Badge>
+                  ))}
+                </div>
               </div>
             </CardContent>
           </Card>
