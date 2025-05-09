@@ -1,4 +1,3 @@
-
 import { FolderArchive, Github, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -103,7 +102,9 @@ const Projets = () => {
                   />
                 </div>
                 <div className="flex-grow">
-                  <p className="text-lg font-semibold mb-1 text-gray-800 dark:text-gray-200">{project.title}</p>
+                  <p className="text-lg font-bold bg-gradient-to-r from-violet-700 to-indigo-700 dark:from-violet-400 dark:to-indigo-300 bg-clip-text text-transparent mb-1">
+                    {project.title}
+                  </p>
                   <p className="text-sm text-gray-600 dark:text-gray-300">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mt-3">
                     {project.tools.map((tool) => (
