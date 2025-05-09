@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { FolderArchive, Github, ArrowLeft, Code, CheckCircle2, Bell, ShieldAlert } from "lucide-react";
+import { FolderArchive, Github, ArrowLeft, Code, CheckCircle2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -67,20 +67,6 @@ const projects = [
         description: "Interface d'édition des détails d'une tâche",
         path: "/lovable-uploads/95019180-d410-4ff1-a6bc-6e1596c5b7c3.png"
       }
-    ],
-    adminFeatures: [
-      "Tableau de bord administrateur avec statistiques globales",
-      "Gestion des utilisateurs (création, modification, suppression)",
-      "Attribution des rôles et permissions",
-      "Surveillance des activités des utilisateurs",
-      "Rapports d'utilisation et d'avancement des projets"
-    ],
-    notificationSystem: [
-      "Notifications en temps réel pour les échéances approchantes",
-      "Alertes lors de l'assignation de nouvelles tâches",
-      "Notifications de modification de projet",
-      "Rappels automatiques pour les tâches en retard",
-      "Centre de notifications avec filtres et marquage comme lu/non lu"
     ]
   },
   {
@@ -176,6 +162,20 @@ const ProjectDetail = () => {
           </CardContent>
         </Card>
 
+        {/* Project Description */}
+        <Card className="w-full bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 border border-violet-200/50 dark:border-violet-800/30">
+          <CardContent className="p-8">
+            <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
+              <FolderArchive size={20} className="text-violet-600 dark:text-violet-300" />
+              Description du projet
+            </h2>
+            <Separator className="mb-4 bg-violet-200/50 dark:bg-violet-800/30" />
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+              {project.longDescription}
+            </p>
+          </CardContent>
+        </Card>
+
         {/* Screenshots Gallery */}
         {project.screenshots && (
           <Card className="w-full bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 border border-violet-200/50 dark:border-violet-800/30">
@@ -191,7 +191,7 @@ const ProjectDetail = () => {
                 <img 
                   src={project.screenshots[currentImage].path} 
                   alt={project.screenshots[currentImage].title} 
-                  className="w-full object-cover h-auto max-h-[500px]"
+                  className="w-full object-contain h-auto max-h-[500px]"
                 />
               </div>
               
@@ -221,20 +221,6 @@ const ProjectDetail = () => {
           </Card>
         )}
 
-        {/* Project Description */}
-        <Card className="w-full bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 border border-violet-200/50 dark:border-violet-800/30">
-          <CardContent className="p-8">
-            <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-              <FolderArchive size={20} className="text-violet-600 dark:text-violet-300" />
-              Description du projet
-            </h2>
-            <Separator className="mb-4 bg-violet-200/50 dark:bg-violet-800/30" />
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              {project.longDescription}
-            </p>
-          </CardContent>
-        </Card>
-
         {/* Features */}
         <Card className="w-full bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 border border-violet-200/50 dark:border-violet-800/30">
           <CardContent className="p-8">
@@ -253,54 +239,6 @@ const ProjectDetail = () => {
             </ul>
           </CardContent>
         </Card>
-
-        {/* Interface Administrative */}
-        {project.adminFeatures && (
-          <Card className="w-full bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 border border-violet-200/50 dark:border-violet-800/30">
-            <CardContent className="p-8">
-              <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                <ShieldAlert size={20} className="text-violet-600 dark:text-violet-300" />
-                Interface Administrative
-              </h2>
-              <Separator className="mb-4 bg-violet-200/50 dark:bg-violet-800/30" />
-              <p className="mb-4 text-gray-700 dark:text-gray-300">
-                L'application dispose d'une interface dédiée aux gestionnaires offrant des fonctionnalités avancées de supervision et d'administration :
-              </p>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {project.adminFeatures.map((feature: string, index: number) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <CheckCircle2 size={16} className="text-blue-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700 dark:text-gray-300">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-        )}
-
-        {/* Système de Notifications */}
-        {project.notificationSystem && (
-          <Card className="w-full bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 border border-violet-200/50 dark:border-violet-800/30">
-            <CardContent className="p-8">
-              <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                <Bell size={20} className="text-violet-600 dark:text-violet-300" />
-                Système de Notifications
-              </h2>
-              <Separator className="mb-4 bg-violet-200/50 dark:bg-violet-800/30" />
-              <p className="mb-4 text-gray-700 dark:text-gray-300">
-                L'application intègre un système complet de notifications pour maintenir les utilisateurs informés des mises à jour importantes :
-              </p>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {project.notificationSystem.map((feature: string, index: number) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <CheckCircle2 size={16} className="text-amber-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700 dark:text-gray-300">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-        )}
 
         {/* Technologies */}
         <Card className="w-full bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 border border-violet-200/50 dark:border-violet-800/30">
