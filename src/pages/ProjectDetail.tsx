@@ -24,10 +24,9 @@ const projects = [
     longDescription: "Cette application web complète permet aux utilisateurs de créer, modifier et supprimer des projets. Elle offre une interface intuitive pour la gestion des tâches associées à chaque projet, avec la possibilité d'assigner des collaborateurs spécifiques. L'application a été développée avec PHP en utilisant le framework Laravel pour le backend, et JavaScript pour améliorer l'interface utilisateur. Le projet utilise une architecture MVC pour une meilleure organisation du code et une maintenance simplifiée.",
     features: [
       "Création et gestion de projets",
-      "Attribution de tâches aux collaborateurs",
+      "Gestion des collaborateurs d'un projet",
+      "Gestion des tâches d'un projet",
       "Suivi de l'avancement des projets",
-      "Interface administrative pour les gestionnaires",
-      "Système de notifications pour les mises à jour"
     ],
     technologies: ["PHP 8", "Laravel", "JavaScript", "MySQL", "HTML/CSS", "Bootstrap"],
     screenshots: [
@@ -81,13 +80,19 @@ const projects = [
     tools: ["Asana", "GitHub", "VS Code", "MySQL Workbench"],
     longDescription: "Cette API REST est conçue pour optimiser la gestion quotidienne d'un cabinet infirmier. Développée avec Python et le framework FastAPI, elle offre des endpoints permettant de gérer les patients, les rendez-vous, les soins et le personnel soignant. L'API intègre un système d'authentification et d'autorisation pour sécuriser l'accès aux données sensibles des patients. La documentation complète de l'API est générée automatiquement via Swagger UI.",
     features: [
-      "Gestion des patients et de leurs dossiers médicaux",
-      "Planification des rendez-vous et des tournées",
-      "Suivi des soins dispensés",
-      "Gestion des facturations et des remboursements",
-      "Génération de rapports statistiques"
+      "Authentification en tant que patient ou infirmière",
+      "Gestion des visites : visualisation, création, modification et suppression",
+      "Gestion des rôles : infirmière, patient, infirmière en chef",
     ],
-    technologies: ["Python", "FastAPI", "SQLAlchemy", "PostgreSQL", "JWT Authentication", "Swagger UI"]
+    technologies: ["Python", "FastAPI", "MySQL", "JWT Authentication", "Swagger UI"],
+    screenshots: [
+      {
+        id: 1,
+        title: "Routes disponibles",
+        description: "Documentation des routes disponibles de l'API",
+        path: "/lovable-uploads/routes.png"
+      },
+    ]
   },
 ];
 
