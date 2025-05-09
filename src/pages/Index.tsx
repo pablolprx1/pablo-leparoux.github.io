@@ -86,7 +86,7 @@ const Index = () => {
               asChild
               className="bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white font-semibold px-8 py-6 rounded-xl h-auto shadow-md hover:shadow-lg transform transition-all duration-300 hover:scale-105"
             >
-              <a href="/fichiers/tableau-de-synthese.xlsx" download>
+              <a href="/fichiers/tableausynthese.pdf" download>
                 Télécharger le tableau de synthèse
               </a>
             </Button>
