@@ -23,7 +23,7 @@ const Parcours = () => (
 
       {/* BTS SIO SLAM */}
       <div className="grid gap-6 w-full max-w-2xl">
-        <div className="bg-gradient-to-br from-violet-50 to-indigo-50 dark:from-violet-900/20 dark:to-indigo-900/20 p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-violet-200/50 dark:border-violet-800/30">
+        <div className="bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-violet-200/50 dark:border-violet-800/30">
           <p className="font-semibold bg-gradient-to-r from-violet-700 to-indigo-700 dark:from-violet-400 dark:to-indigo-300 bg-clip-text text-transparent text-lg mb-3">BTS SIO option SLAM — Lycée Carcouët 2023-2025</p>
           <ul className="list-disc pl-6 text-base text-gray-600 dark:text-gray-300">
             <li>Développement d'applications, gestion de bases de données, travail en projet</li>
@@ -33,7 +33,7 @@ const Parcours = () => (
         </div>
         
         {/* BAC */}
-        <div className="bg-gradient-to-br from-indigo-50 to-violet-50 dark:from-indigo-900/20 dark:to-violet-900/20 p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-violet-200/50 dark:border-violet-800/30">
+        <div className="bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-violet-200/50 dark:border-violet-800/30">
           <p className="font-semibold bg-gradient-to-r from-indigo-700 to-violet-700 dark:from-indigo-400 dark:to-violet-300 bg-clip-text text-transparent text-lg mb-3">BAC Général — Lycée Grand-Air 2020-2023</p>
           <ul className="list-disc pl-6 text-base text-gray-600 dark:text-gray-300">
             <li>Histoire-Géographie, Géopolitique et Sciences politiques</li>

@@ -19,7 +19,7 @@ const MentionsLegales = () => (
         <Separator className="w-1/3 bg-gradient-to-r from-transparent via-violet-300 dark:via-violet-700 to-transparent h-0.5 my-1" />
       </div>
 
-      <div className="max-w-3xl w-full px-4 sm:px-6 text-gray-700 dark:text-gray-300 space-y-8 mb-10 bg-white/80 dark:bg-black/60 glass-morphism p-6 rounded-xl shadow-lg border border-violet-200/50 dark:border-violet-800/30">
+      <div className="max-w-3xl w-full px-4 sm:px-6 text-gray-700 dark:text-gray-300 space-y-8 mb-10 bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 p-6 rounded-xl shadow-lg border border-violet-200/50 dark:border-violet-800/30">
         <div>
           <h2 className="text-xl font-semibold mb-3 bg-gradient-to-r from-violet-700 to-indigo-700 dark:from-violet-400 dark:to-indigo-300 bg-clip-text text-transparent">Éditeur du site</h2>
           <p>Ce site est édité par Pablo LEPAROUX, étudiant en BTS SIO SLAM.</p>

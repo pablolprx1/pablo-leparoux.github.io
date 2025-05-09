@@ -41,7 +41,7 @@ const Experiences = () => {
       
         {/* Alternance FOBware SI */}
         <div className="grid gap-6 w-full max-w-2xl">
-          <div className="bg-gradient-to-br from-violet-50 to-indigo-50 dark:from-violet-900/20 dark:to-indigo-900/20 p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-violet-200/50 dark:border-violet-800/30">
+          <div className="bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-violet-200/50 dark:border-violet-800/30">
             <p className="font-semibold bg-gradient-to-r from-violet-700 to-indigo-700 dark:from-violet-400 dark:to-indigo-300 bg-clip-text text-transparent text-lg mb-2">Alternance Développeur FullStack - FOBware SI</p>
             <p className="text-gray-500 dark:text-gray-300 text-sm mb-3">Septembre 2024 - Septembre 2025</p>
             <ul className="list-disc pl-6 text-base text-gray-600 dark:text-gray-300">
@@ -74,7 +74,7 @@ const Experiences = () => {
             </div>
           </div>
           {/* Stage FOBware SI */}
-          <div className="bg-gradient-to-br from-indigo-50 to-violet-50 dark:from-indigo-900/20 dark:to-violet-900/20 p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-violet-200/50 dark:border-violet-800/30">
+          <div className="bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-violet-200/50 dark:border-violet-800/30">
             <p className="font-semibold bg-gradient-to-r from-indigo-700 to-violet-700 dark:from-indigo-400 dark:to-violet-300 bg-clip-text text-transparent text-lg mb-2">Stage Développeur Web - FOBware SI</p>
             <p className="text-gray-500 dark:text-gray-300 text-sm mb-3">Mai 2024 - Juin 2024</p>
             <ul className="list-disc pl-6 text-base text-gray-600 dark:text-gray-300">

@@ -24,6 +24,11 @@
   .card-hover {
     @apply transition-all duration-300 hover:shadow-xl hover:scale-[1.02];
   }
+  
+  /* Style unifié pour les cartes */
+  .card-bg {
+    @apply bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10;
+  }
 }
 
 @keyframes fade-in {

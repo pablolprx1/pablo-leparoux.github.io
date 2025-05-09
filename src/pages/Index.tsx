@@ -22,7 +22,7 @@ const Index = () => {
         </div>
 
         {/* Carte Titre et Présentation avec effet de profondeur */}
-        <div className="bg-white/90 dark:bg-black/70 glass-morphism p-8 rounded-2xl shadow-lg hover:shadow-xl w-full transform transition-all duration-300 hover:scale-[1.02] border border-violet-200/50 dark:border-violet-800/30">
+        <div className="bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 p-8 rounded-2xl shadow-lg hover:shadow-xl w-full transform transition-all duration-300 hover:scale-[1.02] border border-violet-200/50 dark:border-violet-800/30">
           <div className="flex flex-col items-center gap-3 mb-6">
             <h1 className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-violet-600 to-indigo-600 dark:from-violet-400 dark:to-indigo-300 bg-clip-text text-transparent">
               Pablo LEPAROUX
@@ -49,7 +49,7 @@ const Index = () => {
         </div>
 
         {/* Carrousel des compétences avec mise en avant */}
-        <div className="bg-gradient-to-br from-violet-50 to-indigo-50 dark:from-violet-900/20 dark:to-indigo-900/20 p-8 rounded-2xl shadow-lg w-full transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-violet-200/50 dark:border-violet-800/30">
+        <div className="bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 p-8 rounded-2xl shadow-lg w-full transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-violet-200/50 dark:border-violet-800/30">
           <h2 className="text-xl font-bold mb-6 text-center bg-gradient-to-r from-violet-700 to-indigo-700 dark:from-violet-400 dark:to-indigo-300 bg-clip-text text-transparent">
             Mes compétences développement
           </h2>
@@ -59,7 +59,7 @@ const Index = () => {
         </div>
 
         {/* Carrousel Logiciels avec mise en avant */}
-        <div className="bg-gradient-to-br from-indigo-50 to-violet-50 dark:from-indigo-900/20 dark:to-violet-900/20 p-8 rounded-2xl shadow-lg w-full transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-violet-200/50 dark:border-violet-800/30">
+        <div className="bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 p-8 rounded-2xl shadow-lg w-full transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-violet-200/50 dark:border-violet-800/30">
           <h2 className="text-xl font-bold mb-6 text-center bg-gradient-to-r from-indigo-700 to-violet-700 dark:from-indigo-400 dark:to-violet-300 bg-clip-text text-transparent">
             Mes logiciels / outils
           </h2>
@@ -69,7 +69,7 @@ const Index = () => {
         </div>
 
         {/* Boutons téléchargements modernisés */}
-        <div className="bg-gradient-to-br from-gray-50 to-violet-50 dark:from-gray-900/30 dark:to-violet-900/20 p-8 rounded-2xl shadow-lg w-full flex flex-col items-center gap-6 transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-violet-200/50 dark:border-violet-800/30">
+        <div className="bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 p-8 rounded-2xl shadow-lg w-full flex flex-col items-center gap-6 transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-violet-200/50 dark:border-violet-800/30">
           <h2 className="text-xl font-bold text-center bg-gradient-to-r from-gray-700 to-violet-700 dark:from-gray-300 dark:to-violet-400 bg-clip-text text-transparent">
             Téléchargements
           </h2>
