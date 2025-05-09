@@ -110,31 +110,22 @@ const Projets = () => {
                       <Badge 
                         key={`${project.title}-${tool}`} 
                         variant="secondary" 
-                        className={`bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 ${tool === 'Asana' ? 'cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700' : ''}`}
-                        onClick={tool === 'Asana' ? (e) => {
+                        className={`bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 ${tool === 'Asana' ? 'cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700' : ''} ${tool === 'GitHub' ? 'cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700' : ''}`}
+                        onClick={(e) => {
                           e.preventDefault();
                           e.stopPropagation();
-                          setOpenDialog(true);
-                        } : undefined}
+                          if (tool === 'Asana') {
+                            setOpenDialog(true);
+                          } else if (tool === 'GitHub') {
+                            window.open(project.url, '_blank');
+                          }
+                        }}
                       >
                         {tool === 'Asana' && <AsanaIcon className="h-3.5 w-3.5 mr-1" />}
+                        {tool === 'GitHub' && <Github className="h-3.5 w-3.5 mr-1" />}
                         {tool}
                       </Badge>
                     ))}
-                  </div>
-                  <div className="flex justify-end mt-3">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="gap-1"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        window.open(project.url, '_blank');
-                      }}
-                    >
-                      <Github size={16} />
-                      GitHub
-                    </Button>
                   </div>
                 </div>
               </CardContent>
