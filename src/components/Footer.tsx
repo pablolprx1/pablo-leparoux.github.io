@@ -16,6 +16,11 @@ const Footer = () => {
     });
   };
 
+  const handleLegalClick = () => {
+    // Scroll to top when clicking on mentions légales link
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer className="w-full bg-transparent px-6 py-4">
       <div className="max-w-screen-lg mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -67,7 +72,11 @@ const Footer = () => {
           <span className="mx-1">|</span>
           <span className="opacity-60">© {new Date().getFullYear()}</span>
           <span className="mx-1">|</span>
-          <Link to="/mentions-legales" className="hover:underline hover:text-primary transition-colors">
+          <Link 
+            to="/mentions-legales" 
+            className="hover:underline hover:text-primary transition-colors"
+            onClick={handleLegalClick}
+          >
             Mentions légales
           </Link>
         </div>
