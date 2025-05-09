@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,6 +13,16 @@
   }
   .fade-in {
     animation: fade-in 0.5s cubic-bezier(.4,0,.2,1) both;
+  }
+  
+  /* Ajout de styles pour les effets de texte dégradé */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+  }
+  
+  /* Amélioration de l'effet du survol sur les cartes */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:scale-[1.02];
   }
 }
 
@@ -43,4 +54,3 @@ button[aria-label="Suivant"] {
 .no-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
-
