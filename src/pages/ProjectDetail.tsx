@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { FolderArchive, Github, ArrowLeft, Code, CheckCircle2 } from "lucide-react";
+import { FolderArchive, Github, ArrowLeft, Code, CheckCircle2, Bell, ShieldAlert } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -29,7 +29,59 @@ const projects = [
       "Interface administrative pour les gestionnaires",
       "Système de notifications pour les mises à jour"
     ],
-    technologies: ["PHP 8", "Laravel", "JavaScript", "MySQL", "HTML/CSS", "Bootstrap"]
+    technologies: ["PHP 8", "Laravel", "JavaScript", "MySQL", "HTML/CSS", "Bootstrap"],
+    screenshots: [
+      {
+        id: 1,
+        title: "Écran de connexion",
+        description: "Interface de connexion à l'application avec option de création de compte",
+        path: "/lovable-uploads/6d15a2db-a4a3-4d84-9a87-7fc549205961.png"
+      },
+      {
+        id: 2,
+        title: "Tableau de bord",
+        description: "Vue d'ensemble des tâches en retard, à venir et terminées",
+        path: "/lovable-uploads/e2c3cf6b-5892-4f72-b1b3-9df80dea8a43.png"
+      },
+      {
+        id: 3,
+        title: "Liste des projets",
+        description: "Vue des projets avec options pour ajouter, modifier et supprimer",
+        path: "/lovable-uploads/7f2271df-d74d-4dc7-b9c9-7a8a06f966a1.png"
+      },
+      {
+        id: 4,
+        title: "Modifier un projet",
+        description: "Interface de modification des informations générales et des collaborateurs",
+        path: "/lovable-uploads/14ab38c8-1352-45c4-9e9f-71816c4d3c1c.png"
+      },
+      {
+        id: 5,
+        title: "Gestion des tâches",
+        description: "Liste des tâches avec filtrage par utilisateur et actions",
+        path: "/lovable-uploads/5fbd05b8-7f0e-4e4e-8b03-19e84d5adf1f.png"
+      },
+      {
+        id: 6,
+        title: "Modifier une tâche",
+        description: "Interface d'édition des détails d'une tâche",
+        path: "/lovable-uploads/95019180-d410-4ff1-a6bc-6e1596c5b7c3.png"
+      }
+    ],
+    adminFeatures: [
+      "Tableau de bord administrateur avec statistiques globales",
+      "Gestion des utilisateurs (création, modification, suppression)",
+      "Attribution des rôles et permissions",
+      "Surveillance des activités des utilisateurs",
+      "Rapports d'utilisation et d'avancement des projets"
+    ],
+    notificationSystem: [
+      "Notifications en temps réel pour les échéances approchantes",
+      "Alertes lors de l'assignation de nouvelles tâches",
+      "Notifications de modification de projet",
+      "Rappels automatiques pour les tâches en retard",
+      "Centre de notifications avec filtres et marquage comme lu/non lu"
+    ]
   },
   {
     id: "plGestionInfirmieres",
@@ -57,6 +109,7 @@ const ProjectDetail = () => {
   const { projectId } = useParams();
   const navigate = useNavigate();
   const [project, setProject] = useState<any>(null);
+  const [currentImage, setCurrentImage] = useState<number>(0);
 
   useEffect(() => {
     // Find the project with the matching ID
@@ -123,6 +176,51 @@ const ProjectDetail = () => {
           </CardContent>
         </Card>
 
+        {/* Screenshots Gallery */}
+        {project.screenshots && (
+          <Card className="w-full bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 border border-violet-200/50 dark:border-violet-800/30">
+            <CardContent className="p-8">
+              <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
+                <Code size={20} className="text-violet-600 dark:text-violet-300" />
+                Captures d'écran
+              </h2>
+              <Separator className="mb-6 bg-violet-200/50 dark:bg-violet-800/30" />
+              
+              {/* Current Screenshot */}
+              <div className="overflow-hidden rounded-lg border border-violet-200/50 dark:border-violet-800/30 mb-4">
+                <img 
+                  src={project.screenshots[currentImage].path} 
+                  alt={project.screenshots[currentImage].title} 
+                  className="w-full object-cover h-auto max-h-[500px]"
+                />
+              </div>
+              
+              {/* Screenshot Caption */}
+              <div className="mb-4 text-center">
+                <h3 className="font-medium text-lg">{project.screenshots[currentImage].title}</h3>
+                <p className="text-gray-600 dark:text-gray-300">{project.screenshots[currentImage].description}</p>
+              </div>
+              
+              {/* Thumbnails */}
+              <div className="flex flex-wrap gap-2 justify-center">
+                {project.screenshots.map((screenshot: any, index: number) => (
+                  <div 
+                    key={screenshot.id}
+                    className={`border-2 rounded-md overflow-hidden cursor-pointer transition-all w-16 h-16 md:w-20 md:h-20 ${index === currentImage ? 'border-violet-500 scale-105' : 'border-gray-200 opacity-70'}`}
+                    onClick={() => setCurrentImage(index)}
+                  >
+                    <img 
+                      src={screenshot.path} 
+                      alt={`Miniature ${screenshot.title}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
         {/* Project Description */}
         <Card className="w-full bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 border border-violet-200/50 dark:border-violet-800/30">
           <CardContent className="p-8">
@@ -155,6 +253,54 @@ const ProjectDetail = () => {
             </ul>
           </CardContent>
         </Card>
+
+        {/* Interface Administrative */}
+        {project.adminFeatures && (
+          <Card className="w-full bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 border border-violet-200/50 dark:border-violet-800/30">
+            <CardContent className="p-8">
+              <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
+                <ShieldAlert size={20} className="text-violet-600 dark:text-violet-300" />
+                Interface Administrative
+              </h2>
+              <Separator className="mb-4 bg-violet-200/50 dark:bg-violet-800/30" />
+              <p className="mb-4 text-gray-700 dark:text-gray-300">
+                L'application dispose d'une interface dédiée aux gestionnaires offrant des fonctionnalités avancées de supervision et d'administration :
+              </p>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {project.adminFeatures.map((feature: string, index: number) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <CheckCircle2 size={16} className="text-blue-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700 dark:text-gray-300">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Système de Notifications */}
+        {project.notificationSystem && (
+          <Card className="w-full bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 border border-violet-200/50 dark:border-violet-800/30">
+            <CardContent className="p-8">
+              <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
+                <Bell size={20} className="text-violet-600 dark:text-violet-300" />
+                Système de Notifications
+              </h2>
+              <Separator className="mb-4 bg-violet-200/50 dark:bg-violet-800/30" />
+              <p className="mb-4 text-gray-700 dark:text-gray-300">
+                L'application intègre un système complet de notifications pour maintenir les utilisateurs informés des mises à jour importantes :
+              </p>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {project.notificationSystem.map((feature: string, index: number) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <CheckCircle2 size={16} className="text-amber-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700 dark:text-gray-300">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        )}
 
         {/* Technologies */}
         <Card className="w-full bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 border border-violet-200/50 dark:border-violet-800/30">
