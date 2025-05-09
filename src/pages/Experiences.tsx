@@ -1,5 +1,5 @@
 
-import { Briefcase, Asana } from "lucide-react";
+import { Briefcase } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import {
   Dialog,
@@ -9,6 +9,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { useState } from "react";
+import AsanaIcon from "@/components/icons/AsanaIcon";
 
 const Experiences = () => {
   const [openDialog, setOpenDialog] = useState(false);
@@ -28,7 +29,7 @@ const Experiences = () => {
         <DialogContent className="max-w-4xl">
           <DialogHeader>
             <DialogTitle className="text-xl flex items-center gap-2">
-              <Asana className="h-5 w-5" /> Asana - Gestion de projet
+              <AsanaIcon className="h-5 w-5" /> Asana - Gestion de projet
             </DialogTitle>
           </DialogHeader>
           <div className="mt-4">
@@ -58,7 +59,7 @@ const Experiences = () => {
               className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700"
               onClick={() => setOpenDialog(true)}
             >
-              <Asana className="h-3.5 w-3.5 mr-1" />
+              <AsanaIcon className="h-3.5 w-3.5 mr-1" />
               Asana
             </Badge>
             <Badge 
@@ -90,7 +91,7 @@ const Experiences = () => {
               className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700"
               onClick={() => setOpenDialog(true)}
             >
-              <Asana className="h-3.5 w-3.5 mr-1" />
+              <AsanaIcon className="h-3.5 w-3.5 mr-1" />
               Asana
             </Badge>
             <Badge 

@@ -1,5 +1,5 @@
 
-import { FolderArchive, Asana } from "lucide-react";
+import { FolderArchive } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -10,6 +10,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { useState } from "react";
+import AsanaIcon from "@/components/icons/AsanaIcon";
 
 const projects = [
   {
@@ -53,7 +54,7 @@ const Projets = () => {
         <DialogContent className="max-w-4xl">
           <DialogHeader>
             <DialogTitle className="text-xl flex items-center gap-2">
-              <Asana className="h-5 w-5" /> Asana - Gestion de projet
+              <AsanaIcon className="h-5 w-5" /> Asana - Gestion de projet
             </DialogTitle>
           </DialogHeader>
           <div className="mt-4">
@@ -99,7 +100,7 @@ const Projets = () => {
                           setOpenDialog(true);
                         } : undefined}
                       >
-                        {tool === 'Asana' && <Asana className="h-3.5 w-3.5 mr-1" />}
+                        {tool === 'Asana' && <AsanaIcon className="h-3.5 w-3.5 mr-1" />}
                         {tool}
                       </Badge>
                     ))}
