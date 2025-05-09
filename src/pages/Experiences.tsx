@@ -49,6 +49,7 @@ const Experiences = () => {
               <li>Passage en API d'une application interne de gestion de tâches</li>
               <li>Ticketting</li>
               <li>Réalisation de pages sur le site interne de gestion d'entreprise</li>
+              <li>Rédaction de docs. d'analyse et de spécification</li>
             </ul>
             <div className="flex flex-wrap gap-2 mt-4">
               <Badge 
