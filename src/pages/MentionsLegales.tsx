@@ -36,14 +36,6 @@ const MentionsLegales = () => (
         </div>
 
         <div>
-          <h2 className="text-xl font-semibold mb-3 bg-gradient-to-r from-violet-700 to-indigo-700 dark:from-violet-400 dark:to-indigo-300 bg-clip-text text-transparent">Propriété intellectuelle</h2>
-          <p>
-            L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle.
-            Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.
-          </p>
-        </div>
-
-        <div>
           <h2 className="text-xl font-semibold mb-3 bg-gradient-to-r from-violet-700 to-indigo-700 dark:from-violet-400 dark:to-indigo-300 bg-clip-text text-transparent">Données personnelles</h2>
           <p>
             Ce site ne collecte aucune donnée personnelle. Le site ne fait pas usage de cookies nécessitant une acceptation de votre part.
