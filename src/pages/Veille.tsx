@@ -34,17 +34,17 @@ const articles = [
     date: "2024"
   },
   {
+    title: "IA : Quel avenir pour les développeurs ?",
+    description: "ChatGPT, Devin... les technologies à base d'IA sont de plus en plus performantes. Dans ce contexte, quel sera à terme le rôle des développeurs ?",
+    source: "LaConsole.dev",
+    url: "https://laconsole.dev/blog/ia-avenir-developpeurs",
+    date: "2024"
+  },
+  {
     title: "L'IA et l'avenir des développeurs en informatique : à quoi s'attendre ?",
     description: "Les développeurs sont désormais impliqués dans la conception, la formation et l'amélioration des systèmes d'IA, ainsi que dans l'interprétation des insights générés par l'IA.",
     source: "iQuesta",
     url: "https://www.iquesta.com/Article-Lia-Et-Lavenir-Des-Developpeurs-En-Informatique-Quoi-Attendre-228.html",
-    date: "2023"
-  },
-  {
-    title: "L'IA et l'avenir des développeurs",
-    description: "Comment l'IA transforme le métier de développeur informatique et les compétences à développer pour rester pertinent.",
-    source: "LaConsole.dev",
-    url: "https://laconsole.dev/blog/ia-avenir-developpeurs",
     date: "2023"
   },
 ];
