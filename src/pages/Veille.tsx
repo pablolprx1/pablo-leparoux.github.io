@@ -1,16 +1,37 @@
 
-import { Lightbulb } from "lucide-react";
+import { Lightbulb, Rss, Twitter } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
-// Articles data
+// Articles data - sorted by date (newest to oldest)
 const articles = [
   {
-    title: "L'IA et l'avenir des développeurs",
-    description: "Comment l'IA transforme le métier de développeur informatique et les compétences à développer pour rester pertinent.",
-    source: "LaConsole.dev",
-    url: "https://laconsole.dev/blog/ia-avenir-developpeurs",
-    date: "2023"
+    title: "OpenAI s'offre Windsurf pour 3 milliards de dollars, sa plus importante acquisition",
+    description: "OpenAI rachète la start-up Windsurf pour 3 milliards de dollars, sa plus grande acquisition à ce jour, afin de renforcer ses outils d'IA pour le codage.",
+    source: "l'Echo",
+    url: "https://www.lecho.be/entreprises/tech-science/openai-s-offre-windsurf-pour-3-milliards-de-dollars-sa-plus-importante-acquisition/10605900.html",
+    date: "2025"
+  },
+  {
+    title: "L'IA de Claude bientôt intégrée à Xcode",
+    description: "Apple travaille sur l'intégration de l'IA Claude d'Anthropic dans Xcode pour assister les développeurs dans leurs tâches de programmation.",
+    source: "Consomac",
+    url: "https://consomac.fr/news-21167-l-ia-de-claude-bientot-integree-a-xcode.html",
+    date: "2024"
+  },
+  {
+    title: "Nouveautés Figma : générateur de code propulsé à l'IA, dessin vectoriel et création de sites",
+    description: "Figma a annoncé plusieurs fonctionnalités basées sur l'IA générative, dont un générateur de code et de nouvelles capacités de dessin vectoriel.",
+    source: "Blog du Modérateur",
+    url: "https://www.blogdumoderateur.com/nouveautes-figma-generateur-code-propulse-ia-dessin-vectoriel-creation-sites/",
+    date: "2024"
+  },
+  {
+    title: "Faire évoluer le métier de développeur avec l'IA générative",
+    description: "L'intelligence artificielle générative représente une avancée technologique majeure qui bouleverse de nombreux domaines professionnels.",
+    source: "Synapse",
+    url: "https://www.synapse-developpement.fr/blog/ia/faire-evoluer-le-metier-de-developpeur-avec-lia-generative/",
+    date: "2024"
   },
   {
     title: "L'IA et l'avenir des développeurs en informatique : à quoi s'attendre ?",
@@ -20,18 +41,11 @@ const articles = [
     date: "2023"
   },
   {
-    title: "Faire évoluer le métier de développeur avec l'IA générative",
-    description: "L'intelligence artificielle générative représente une avancée technologique majeure qui bouleverse de nombreux domaines professionnels.",
-    source: "Synapse",
-    url: "https://www.synapse-developpement.fr/blog/ia/faire-evoluer-le-metier-de-developpeur-avec-lia-generative/",
-    date: "2024"
-  },
-    {
-    title: "OpenAI s’offre Windsurf pour 3 milliards de dollars, sa plus importante acquisition",
-    description: "OpenAI rachète la start-up Windsurf pour 3 milliards de dollars, sa plus grande acquisition à ce jour, afin de renforcer ses outils d’IA pour le codage.",
-    source: "l'Echo",
-    url: "https://www.lecho.be/entreprises/tech-science/openai-s-offre-windsurf-pour-3-milliards-de-dollars-sa-plus-importante-acquisition/10605900.html",
-    date: "2025"
+    title: "L'IA et l'avenir des développeurs",
+    description: "Comment l'IA transforme le métier de développeur informatique et les compétences à développer pour rester pertinent.",
+    source: "LaConsole.dev",
+    url: "https://laconsole.dev/blog/ia-avenir-developpeurs",
+    date: "2023"
   },
 ];
 
@@ -51,6 +65,37 @@ const Veille = () => (
         <Separator className="w-1/3 bg-gradient-to-r from-transparent via-violet-300 dark:via-violet-700 to-transparent h-0.5 my-1" />
         <div className="max-w-3xl text-lg text-gray-600 dark:text-gray-300 text-center mb-4">
           L'évolution du métier de développeur informatique avec l'émergence de l'IA
+        </div>
+      </div>
+      
+      {/* Comment je suis l'information */}
+      <div className="w-full max-w-4xl bg-white/80 dark:bg-black/40 p-6 rounded-xl shadow-md border border-violet-100 dark:border-violet-900/30">
+        <h2 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-violet-700 to-indigo-700 dark:from-violet-400 dark:to-indigo-300 bg-clip-text text-transparent">Comment je reste informé</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex items-start gap-3">
+            <div className="p-2 bg-violet-100 dark:bg-violet-900/30 rounded-full">
+              <Rss size={20} className="text-violet-600 dark:text-violet-300" />
+            </div>
+            <div>
+              <h3 className="text-lg font-medium mb-1">Google Alerts</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Suivi de mots-clés : Windsurf, OpenAI, Figma, Codeium, IA générative
+              </p>
+            </div>
+          </div>
+          
+          <div className="flex items-start gap-3">
+            <div className="p-2 bg-violet-100 dark:bg-violet-900/30 rounded-full">
+              <Twitter size={20} className="text-violet-600 dark:text-violet-300" />
+            </div>
+            <div>
+              <h3 className="text-lg font-medium mb-1">Twitter</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Abonnements à des comptes spécialisés en actualités IA et technologies
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       
