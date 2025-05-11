@@ -17,14 +17,14 @@ const articles = [
     description: "Apple travaille sur l'intégration de l'IA Claude d'Anthropic dans Xcode pour assister les développeurs dans leurs tâches de programmation.",
     source: "Consomac",
     url: "https://consomac.fr/news-21167-l-ia-de-claude-bientot-integree-a-xcode.html",
-    date: "2024"
+    date: "2025"
   },
   {
     title: "Nouveautés Figma : générateur de code propulsé à l'IA, dessin vectoriel et création de sites",
     description: "Figma a annoncé plusieurs fonctionnalités basées sur l'IA générative, dont un générateur de code et de nouvelles capacités de dessin vectoriel.",
     source: "Blog du Modérateur",
     url: "https://www.blogdumoderateur.com/nouveautes-figma-generateur-code-propulse-ia-dessin-vectoriel-creation-sites/",
-    date: "2024"
+    date: "2025"
   },
   {
     title: "Faire évoluer le métier de développeur avec l'IA générative",
@@ -70,7 +70,7 @@ const Veille = () => (
       
       {/* Comment je suis l'information */}
       <div className="w-full max-w-4xl bg-white/80 dark:bg-black/40 p-6 rounded-xl shadow-md border border-violet-100 dark:border-violet-900/30">
-        <h2 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-violet-700 to-indigo-700 dark:from-violet-400 dark:to-indigo-300 bg-clip-text text-transparent">Comment je reste informé</h2>
+        <h2 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-violet-700 to-indigo-700 dark:from-violet-400 dark:to-indigo-300 bg-clip-text text-transparent">Comment je reste informé ?</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex items-start gap-3">
