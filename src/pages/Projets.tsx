@@ -71,7 +71,7 @@ const Projets = () => {
           </div>
           <Separator className="w-1/3 bg-gradient-to-r from-transparent via-violet-300 dark:via-violet-700 to-transparent h-0.5 my-1" />
           <div className="max-w-xl text-lg text-gray-600 dark:text-gray-300 text-center mb-4">
-            Voici les projets personnels que j'ai réalisé et qui mettent en avant les compétences que j'ai acquit durant ces deux années de BTS SIO.
+            Voici les projets personnels que j'ai réalisé et qui mettent en avant les compétences que j'ai acquiS durant ces deux années de BTS SIO.
           </div>
         </div>
       
