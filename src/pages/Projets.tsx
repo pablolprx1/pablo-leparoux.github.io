@@ -1,3 +1,4 @@
+
 import { FolderArchive, Github, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -24,9 +25,7 @@ const projects = [
     features: [
       "Création et gestion de projets",
       "Attribution de tâches aux collaborateurs",
-      "Suivi de l'avancement des projets",
-      "Interface administrative pour les gestionnaires",
-      "Système de notifications pour les mises à jour"
+      "Suivi de l'avancement des projets"
     ],
     technologies: ["PHP 8", "Laravel", "JavaScript", "MySQL", "HTML/CSS", "Bootstrap"]
   },
@@ -91,7 +90,7 @@ const Projets = () => {
             <Card 
               key={project.id}
               onClick={() => navigate(`/projets/${project.id}`)}
-              className="flex gap-4 bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 p-4 rounded-xl shadow-lg hover:shadow-xl transition border border-violet-200/50 dark:border-violet-800/30 cursor-pointer"
+              className="bg-gradient-to-br from-white/80 to-violet-50/90 dark:from-black/60 dark:to-violet-900/10 p-4 rounded-xl shadow-lg transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border border-violet-200/50 dark:border-violet-800/30 cursor-pointer"
             >
               <CardContent className="p-0 flex items-center gap-4 w-full">
                 <div className="flex-shrink-0 w-16 h-16 flex items-center justify-center bg-white rounded-lg shadow-sm">
