@@ -20,10 +20,17 @@ const articles = [
     date: "2025"
   },
   {
-    title: "Nouveautés Figma : générateur de code propulsé à l'IA, dessin vectoriel et création de sites",
-    description: "Figma a annoncé plusieurs fonctionnalités basées sur l'IA générative, dont un générateur de code et de nouvelles capacités de dessin vectoriel.",
-    source: "Blog du Modérateur",
-    url: "https://www.blogdumoderateur.com/nouveautes-figma-generateur-code-propulse-ia-dessin-vectoriel-creation-sites/",
+    title: "Intelligence Artificielle Générative de code WLangage",
+    description: "Nouveautés 2025",
+    source: "PCSoft",
+    url: "https://doc.pcsoft.fr/fr-FR/?9000221",
+    date: "2025"
+  },
+  {
+    title: "OpenAI s'offre Windsurf pour 3 milliards de dollars, sa plus importante acquisition",
+    description: "OpenAI rachète la start-up Windsurf pour 3 milliards de dollars, sa plus grande acquisition à ce jour, afin de renforcer ses outils d'IA pour le codage.",
+    source: "l'Echo",
+    url: "https://www.lecho.be/entreprises/tech-science/openai-s-offre-windsurf-pour-3-milliards-de-dollars-sa-plus-importante-acquisition/10605900.html",
     date: "2025"
   },
   {
